@@ -1,8 +1,9 @@
-import {Title} from "@mantine/core";
+import HomeHero from "./components/HomeHero";
+
 
 function Home() {
     return (
-        <Title>Home</Title>
+        <HomeHero/>
     )
 }
 
