@@ -1,15 +1,6 @@
 import { createStyles} from '@mantine/core';
 
 export const useHomeHeroStyles = createStyles((theme) => ({
-    wrapper: {
-        //backgroundColor: 'red',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: 'white',
-        padding: 100,
-    },
     imageStyle: {
         height:600
     },
@@ -28,6 +19,20 @@ export const useHomeHeroStyles = createStyles((theme) => ({
     },
     colorWhite: {
         color: 'white'
-    }
+    },
+    robotHeroImg:{
+      
+    },
+    heroButton: {
+        backgroundColor: '#E03131',
+        textAlign:'center',
+        fontSize: '0.8rem',
+        padding: 0
+    },
+    heroFont: {
+        lineHeight: 'normal',
+        textAlign: 'left',
+    },
+
 
 }))

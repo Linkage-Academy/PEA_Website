@@ -6,7 +6,7 @@ function Home() {
     return (
         <Stack >
             
-            <Stack align={"center"} spacing={"lg"}>
+            <Stack spacing={"lg"}>
                 <HomeHero/>
             </Stack>
         </Stack>

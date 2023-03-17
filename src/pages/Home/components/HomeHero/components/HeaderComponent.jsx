@@ -1,20 +1,17 @@
-import { Button, Image } from '@mantine/core';
+import { Button, Image, Group  } from '@mantine/core';
 import React from 'react';
-import { BackgroundImage, Anchor, Group } from '@mantine/core';
 import { Header, Burger } from '@mantine/core';
 import {useHomeHeroStyles} from '../HomeHero.styles';
+import isotype from './static/logoColor.svg'
 
 
 function HeaderComponent(){
     const {classes} = useHomeHeroStyles();
     return(
         <Header className={classes.header_style} px={"xl"} pt ={'xs'} sx={{backgroundColor:'rgba(0,0,0,0)', border:'none'}}>
-            <h1>Logo</h1>
+            <Image maw={65} radius="md" src={isotype} alt="Random image" />
             <Group className={classes.text_white_overlay}>
-                <Anchor href="#" target="_blank" className={classes.colorWhite}>Inicio</Anchor>
-                <Anchor href="#" target="_blank" className={classes.colorWhite}>Cursos</Anchor>
-                <Anchor href="#" target="_blank" className={classes.colorWhite}>Quienes Somos?</Anchor>
-                <Burger/>;
+                <Burger/>
             </Group>
         </Header>
     )
