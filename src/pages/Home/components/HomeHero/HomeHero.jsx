@@ -1,19 +1,12 @@
-import {Stack, Title} from "@mantine/core";
-import {ReactComponent as HeroImage} from './static/HeroImage.svg';
-import {useHomeHeroStyles} from "./HomeHero.styles";
-import MainText from "./components/MainText";
+import { Button, Image } from '@mantine/core';
+import React from 'react';
+import { BackgroundImage, Anchor, Group } from '@mantine/core';
+import HeaderComponent from './components/HeaderComponent';
 
-function HomeHero() {
-    const {classes} = useHomeHeroStyles()
-    return (
-        <Stack className={classes.container} p={"xl"} px={100}>
-            <Title>Home</Title>
-            <Stack align={"center"} spacing={"lg"}>
-                <MainText/>
-                <HeroImage/>
-            </Stack>
-        </Stack>
+function HomeHero(){
+   
+    return(
+        <HeaderComponent/>
     )
 }
-
-export default HomeHero
+export default HomeHero;

@@ -1,10 +1,16 @@
-import HomeHero from "./components/HomeHero";
-
+import {Stack, Title} from "@mantine/core";
+import HomeHero from "./components/HomeHero/HomeHero";
 
 function Home() {
+    
     return (
-        <HomeHero/>
+        <Stack >
+            
+            <Stack align={"center"} spacing={"lg"}>
+                <HomeHero/>
+            </Stack>
+        </Stack>
     )
 }
 
-export default Home
+export default Home;
