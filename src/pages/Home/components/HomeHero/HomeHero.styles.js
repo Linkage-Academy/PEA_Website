@@ -15,14 +15,13 @@ export const useHomeHeroStyles = createStyles((theme) => ({
         color:'white',
         textShadow:'0.05rem 0.05rem grey',
         fontSize: '1rem',
+        
 
     },
     colorWhite: {
         color: 'white'
     },
-    robotHeroImg:{
-      
-    },
+
     heroButton: {
         backgroundColor: '#E03131',
         textAlign:'center',
@@ -33,6 +32,16 @@ export const useHomeHeroStyles = createStyles((theme) => ({
         lineHeight: 'normal',
         textAlign: 'left',
     },
+    logoContainer: {
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'center',
+        backgroundColor:'#FA5252',
+        paddingTop:'0',
+        borderBottomRightRadius:'20px',
+        width:'40%',
+        height:'50px'
+    }
 
 
 }))
