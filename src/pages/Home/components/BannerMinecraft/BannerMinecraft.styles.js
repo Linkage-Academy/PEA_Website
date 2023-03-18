@@ -3,7 +3,7 @@ import { createStyles} from '@mantine/core';
 export const useBannerMinecraftStyles = createStyles((theme) => ({
 
     bannerButton: {
-        textAlign:'center',
+        
         fontSize: '0.75rem',
     },
 
