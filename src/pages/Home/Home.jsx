@@ -1,5 +1,8 @@
 import {Stack, Title} from "@mantine/core";
 import HomeHero from "./components/HomeHero/HomeHero";
+import Categories from "./components/Categories/Categories";
+import BannerMinecraft from "./components/BannerMinecraft/BannerMinecraft";
+
 
 function Home() {
     
@@ -8,6 +11,8 @@ function Home() {
             
             <Stack spacing={"lg"}>
                 <HomeHero/>
+                <Categories/>
+                <BannerMinecraft/>
             </Stack>
         </Stack>
     )

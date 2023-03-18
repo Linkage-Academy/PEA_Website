@@ -3,6 +3,7 @@ import {MantineProvider} from "@mantine/core";
 import {Notifications} from "@mantine/notifications";
 import Home from "./pages/Home";
 
+
 function App() {
     const routes = createBrowserRouter([
         {

@@ -11,7 +11,7 @@ function HomeHero(){
     return(
         <>
             <HeaderComponent/>
-            <Group px="sm" noWrap spacing={0}>
+            <Group px={"sm"} noWrap spacing={0}>
                 <Stack sx={{width:"40%"}}>
                     <Title className={classes.heroFont} sx={{fontSize:'1.6rem'}}>¡Aprende a Construir el Futuro!</Title>
                     <Button className={[classes.heroButton, classes.heroFont]}>¡Registrate Ahora!</Button>
