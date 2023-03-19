@@ -17,7 +17,8 @@ function App() {
 function WrappedApp() {
     return (
         <MantineProvider withNormalizeCSS withGlobalStyles theme={{
-            headings: { fontFamily: 'Merriweather, sans-serif' },
+            fontFamily: "Open Sans, sans-serif",
+            headings: {fontFamily: 'Merriweather, sans-serif'},
         }}>
             <Notifications position={"top-right"}/>
             <App/>

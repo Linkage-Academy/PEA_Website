@@ -1,9 +1,9 @@
-import { createStyles} from '@mantine/core';
+import {createStyles} from '@mantine/core';
 
 export const useCategoriesStyles = createStyles((theme) => ({
 
     cardButton: {
-        textAlign:'center',
+        textAlign: 'center',
         fontSize: '0.75rem',
     },
 
@@ -11,6 +11,4 @@ export const useCategoriesStyles = createStyles((theme) => ({
         lineHeight: 'normal',
         textAlign: 'left',
     },
-
-
 }))

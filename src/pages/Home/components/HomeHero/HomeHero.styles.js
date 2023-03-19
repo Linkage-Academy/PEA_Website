@@ -1,38 +1,46 @@
-import { createStyles} from '@mantine/core';
+import {createStyles} from '@mantine/core';
 
 export const useHomeHeroStyles = createStyles((theme) => ({
     imageStyle: {
-        height:600
+        height: 600
     },
-    header_style: {
+
+    header: {
         display: 'flex',
-        //alignContent: 'flex-end',
-        justifyContent: 'space-between'
-        
-        //marginLeft:900,
-    },
-    text_white_overlay: {
-        color:'white',
-        textShadow:'0.05rem 0.05rem grey',
-        fontSize: '1rem',
+        border: "none",
+        justifyContent: 'space-between',
 
-    },
-    colorWhite: {
-        color: 'white'
-    },
-    robotHeroImg:{
-      
-    },
-    heroButton: {
-        backgroundColor: '#E03131',
-        textAlign:'center',
-        fontSize: '0.8rem',
-        padding: 0
-    },
-    heroFont: {
-        lineHeight: 'normal',
-        textAlign: 'left',
+        [theme.fn.largerThan('sm')]: {
+            backgroundColor: theme.colors["red"][7],
+            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"
+        },
     },
 
+    headerLogo: {
+        filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"
+    },
+
+    activeLink: {
+        fontWeight: 700,
+        textDecorationLine: "underline",
+        textDecorationThickness: "0.125rem",
+        textUnderlineOffset: "0.25rem",
+    },
+
+    desktopNavbar: {
+        display: "none",
+        fontSize: theme.fontSizes.md,
+        fontWeight: 600,
+        color: "white",
+
+        [theme.fn.largerThan('sm')]: {
+            display: "flex"
+        },
+    },
+
+    desktopNavbarCTA: {
+        filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+        borderRadius: theme.radius.sm
+    },
 
 }))

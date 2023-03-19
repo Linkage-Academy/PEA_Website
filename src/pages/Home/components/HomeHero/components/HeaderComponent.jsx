@@ -1,23 +1,49 @@
-import { Button, Image, Group  } from '@mantine/core';
+import {Anchor, Burger, Button, Drawer, Group, Header, Image, MediaQuery} from '@mantine/core';
 import React from 'react';
-import { Header, Burger } from '@mantine/core';
 import {useHomeHeroStyles} from '../HomeHero.styles';
-import isotype from './static/logoColor.svg'
+import isotype from './static/logoLinkage.png'
+import {Link} from "react-router-dom";
+import {useDisclosure} from "@mantine/hooks";
 
 
-function HeaderComponent(){
+function HeaderComponent() {
     const {classes} = useHomeHeroStyles();
-    return(
-        <Header className={classes.header_style} px={"xl"} pt ={'xs'} sx={{backgroundColor:'rgba(0,0,0,0)', border:'none'}}>
-            <Image maw={65} radius="md" src={isotype} alt="Random image" />
-            <Group className={classes.text_white_overlay}>
-                <Burger/>
+    const [opened, {toggle, close}] = useDisclosure(false)
+
+    return (
+        <Header className={classes.header} px={"xl"} py={"sm"} height={"auto"}>
+
+            <Image maw={185} src={isotype} alt="Academy Linkage Logo" className={classes.headerLogo}/>
+
+            <MediaQuery largerThan={"sm"} styles={{display: "none"}}>
+                {/* It does not show in  mobile view because its white */}
+                <Burger opened={opened} color={"white"} onClick={toggle}/>
+            </MediaQuery>
+
+            <Drawer opened={opened} onClose={close}>
+                {/* Add links here to your preference */}
+                Mobile Navbar
+            </Drawer>
+
+            <Group className={classes.desktopNavbar} spacing={"xl"}>
+                <Anchor component={Link} to={"/"} color={"white"} className={classes.activeLink}>Inicio</Anchor>
+                <Anchor component={Link} to={"/"} color={"white"} underline={false}>Cursos</Anchor>
+                <Anchor component={Link} to={"/"} color={"white"} underline={false}>Aula Virtual</Anchor>
+
+                <Button
+                    className={classes.desktopNavbarCTA}
+                    size={"sm"}
+                    color={"red.6"}
+                    variant={"white"}
+                >
+                    Inscribete Ahora
+                </Button>
+
             </Group>
         </Header>
     )
 
 }
-
 
 
 export default HeaderComponent;
