@@ -1,10 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.cd42e7da.js",
+    "main.css": "/static/css/main.99fa32a9.css",
+    "main.js": "/static/js/main.c9e906db.js",
+    "static/media/categoryBackend.svg": "/static/media/categoryBackend.1a69904df9daf286747570ec41527f8f.svg",
+    "static/media/minecraftLand3d.svg": "/static/media/minecraftLand3d.8dcf5475cdbabfba07692dc7b5ceb216.svg",
+    "static/media/categoryInfantil.svg": "/static/media/categoryInfantil.e7bb35f2e2bc6bf2793c7fc8e059f3a0.svg",
+    "static/media/categoryFrontend.svg": "/static/media/categoryFrontend.6033f1234db024c3930de247dbe1f718.svg",
+    "static/media/robot.svg": "/static/media/robot.183c0e9c7b527542894e25f69395e90e.svg",
+    "static/media/logoLinkage.png": "/static/media/logoLinkage.9cc87f0774f398118cb9.png",
     "index.html": "/index.html",
-    "main.cd42e7da.js.map": "/static/js/main.cd42e7da.js.map"
+    "main.99fa32a9.css.map": "/static/css/main.99fa32a9.css.map",
+    "main.c9e906db.js.map": "/static/js/main.c9e906db.js.map"
   },
   "entrypoints": [
-    "static/js/main.cd42e7da.js"
+    "static/css/main.99fa32a9.css",
+    "static/js/main.c9e906db.js"
   ]
 }
