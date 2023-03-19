@@ -1,14 +1,11 @@
 import {createStyles} from '@mantine/core';
 
 export const useHomeHeroStyles = createStyles((theme) => ({
-    imageStyle: {
-        height: 600
-    },
-
     header: {
         display: 'flex',
         border: "none",
         justifyContent: 'space-between',
+        backgroundColor: "transparent",
 
         [theme.fn.largerThan('sm')]: {
             backgroundColor: theme.colors["red"][7],
@@ -43,4 +40,24 @@ export const useHomeHeroStyles = createStyles((theme) => ({
         borderRadius: theme.radius.sm
     },
 
+    mainHeroText: {
+        maxWidth: "47%",
+    },
+
+    mainHeroImage: {
+        flexGrow: 1,
+    },
+
+    rightSidebar: {
+        height: "100%",
+        width: "25%",
+        backgroundColor: theme.colors["red"][6],
+        position: "absolute",
+        zIndex: -1,
+        alignSelf: "flex-end",
+
+        [theme.fn.largerThan('sm')]: {
+            display: "none"
+        }
+    }
 }))
