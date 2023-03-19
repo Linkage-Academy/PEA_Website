@@ -12,10 +12,8 @@ function HomeHero() {
         <Stack spacing={0} sx={{position: "relative"}}>
             <HeaderComponent/>
             <Group px={"sm"} noWrap spacing={0}>
-                <Stack className={classes.mainHeroText}>
-                    <Title sx={{whiteSpace: "nowrap", fontSize: "1.6rem", fontWeight: "500"}}>¡Aprende
-                        a<br/> Construir el<br/>
-                        Futuro!</Title>
+                <Stack className={classes.mainHero}>
+                    <Title className={classes.mainTitle}>¡Aprende a<br/> Construir el<br/>Futuro!</Title>
                     <Button color={"red.8"}>¡Registrate Ahora!</Button>
                 </Stack>
 

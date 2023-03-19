@@ -14,7 +14,14 @@ export const useHomeHeroStyles = createStyles((theme) => ({
     },
 
     headerLogo: {
-        filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"
+        filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+        padding: theme.spacing.md,
+        backgroundColor: theme.colors["red"][6],
+        borderBottomRightRadius: "10px",
+
+        [theme.fn.largerThan('sm')]: {
+            backgroundColor: "transparent",
+        },
     },
 
     activeLink: {
@@ -40,8 +47,14 @@ export const useHomeHeroStyles = createStyles((theme) => ({
         borderRadius: theme.radius.sm
     },
 
-    mainHeroText: {
+    mainHero: {
         maxWidth: "47%",
+    },
+
+    mainTitle: {
+        whiteSpace: "nowrap",
+        fontSize: "1.6rem",
+        fontWeight: "500"
     },
 
     mainHeroImage: {
