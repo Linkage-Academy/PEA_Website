@@ -52,9 +52,13 @@ export const useHomeHeroStyles = createStyles((theme) => ({
     },
 
     mainTitle: {
-        whiteSpace: "nowrap",
         fontSize: "1.6rem",
-        fontWeight: "500"
+        fontWeight: "500",
+
+        [theme.fn.largerThan('xs')]: {
+            fontSize: "3.4rem",
+            fontWeight: "600",
+        }
     },
 
     mainHeroImage: {
