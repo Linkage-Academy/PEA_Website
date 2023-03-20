@@ -1,7 +1,7 @@
 import {Box, Button, Group, Image, Stack, Title} from '@mantine/core';
 import React from 'react';
 import HeaderComponent from './components/HeaderComponent';
-import robot from './static/robot.svg'
+import robot from './static/robot.webp'
 import {useHomeHeroStyles} from "./HomeHero.styles";
 
 function HomeHero() {
