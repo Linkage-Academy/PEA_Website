@@ -21,7 +21,7 @@ function HeaderComponent() {
                     <Burger opened={opened} color={"white"} onClick={toggle}/>
                 </MediaQuery>
 
-                <Drawer opened={opened} onClose={close}>
+                <Drawer opened={opened} onClose={close} zIndex={1000}>
                     {/* Add links here to your preference */}
                     Mobile Navbar
                 </Drawer>
