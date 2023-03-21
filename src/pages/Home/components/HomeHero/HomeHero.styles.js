@@ -48,14 +48,14 @@ export const useHomeHeroStyles = createStyles((theme) => ({
     },
 
     mainHero: {
-        maxWidth: "47%",
+        flexGrow: 1
     },
 
     mainTitle: {
         fontSize: "1.6rem",
         fontWeight: "500",
 
-        [theme.fn.largerThan('xs')]: {
+        [theme.fn.largerThan('sm')]: {
             fontSize: "3.4rem",
             fontWeight: "600",
         }

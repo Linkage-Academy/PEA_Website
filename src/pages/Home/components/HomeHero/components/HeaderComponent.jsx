@@ -1,9 +1,10 @@
-import {Anchor, Box, Burger, Button, Drawer, Group, Header, Image, MediaQuery} from '@mantine/core';
+import {Anchor, Box, Burger, Button, Drawer, Group, Header, Image, MediaQuery, Stack} from '@mantine/core';
 import React from 'react';
 import {useHomeHeroStyles} from '../HomeHero.styles';
 import isotype from './static/logoLinkage.png'
 import {Link} from "react-router-dom";
 import {useDisclosure} from "@mantine/hooks";
+
 
 
 function HeaderComponent() {
@@ -22,8 +23,11 @@ function HeaderComponent() {
                 </MediaQuery>
 
                 <Drawer opened={opened} onClose={close} zIndex={1000}>
-                    {/* Add links here to your preference */}
-                    Mobile Navbar
+                    <Stack>
+                        <Anchor component={Link} to={"/"} color={"black"} className={classes.activeLink}>Inicio</Anchor>
+                        <Anchor component={Link} to={"/"} color={"black"} underline={false}>Cursos</Anchor>
+                        <Anchor component={Link} to={"/"} color={"black"} underline={false}>Aula Virtual</Anchor>
+                    </Stack>
                 </Drawer>
 
                 <Group className={classes.desktopNavbar} spacing={"xl"}>

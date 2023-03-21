@@ -3,6 +3,8 @@ import React from 'react';
 import {useHomeHeroStyles} from "./HomeHero.styles";
 import {useMediaQuery} from "@mantine/hooks";
 import {useTheme} from "@emotion/react";
+import robotDesktop from './static/robot_banner.webp';
+import robot from './static/robot.webp';
 
 function HomeHero() {
 
@@ -11,11 +13,11 @@ function HomeHero() {
     const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
 
     return (
-        <Stack spacing={"xl"}>
+        <Stack spacing={'sm'}>
             <Group noWrap>
                 <Stack className={classes.mainHero}>
                     <Title className={classes.mainTitle}>¡Aprende a Construir el Futuro!</Title>
-                    <Group spacing={"xs"}>
+                    <Group spacing={"xs"} noWrap>
                         <Button color={"red.8"} size={isLargeScreen ? "lg" : "sm"} fullWidth={!isLargeScreen}
                                 radius={"md"}>¡Registrate Ahora!</Button>
                         {isLargeScreen ?
@@ -25,12 +27,8 @@ function HomeHero() {
                     </Group>
                 </Stack>
 
-                <Group sx={{border: "1px solid red", flexGrow: 1}} p={"xl"} spacing={0} noWrap>
-                    <Image withPlaceholder h={250} w={200}/>
-
-                    <Card shadow={"md"} withBorder h={300} ml={0} sx={{flexGrow: 1}}>
-                        Hello
-                    </Card>
+                <Group sx={{flexGrow: 1, justifyContent:'flex-end'}} p={"xl"} spacing={0} noWrap>
+                    <Image src={isLargeScreen ? robotDesktop : robot} width='95%'/> 
                 </Group>
             </Group>
 
