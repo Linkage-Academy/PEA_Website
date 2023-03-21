@@ -1,10 +1,14 @@
 import {createStyles} from '@mantine/core';
+import Infantil from './static/Infantil.webp'
+import infantil from './static/Infantil.webp';
 
 export const useCategoriesStyles = createStyles((theme) => ({
 
     cardButton: {
+        display:'flex',
         textAlign: 'center',
         fontSize: '0.75rem',
+        justifyContent:'center',
     },
 
     heroFont: {
@@ -13,24 +17,31 @@ export const useCategoriesStyles = createStyles((theme) => ({
     },
 
     categoryLayout: {
+        alignItems:'center',
         [theme.fn.largerThan('sm')]: {
             flexDirection:'row',
-            justifyContent:'space-around',
-            flexGrow:1,
+            flexGrow:1,  
         },
     },
-
-    categoryContainer: {
-        height: 3000,
+    categoryMobileContainer:{
+        width:324,
+        height: 90,
         filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
 
-        [theme.fn.largerThan('sm')]: {
-            height: 300
-        }
+     
+    },
+    categoryContainer: {
+            width:400,
+            height: 160,
+            filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
+            justifyContent:'center',
+     
     },
 
     categoryContentLayout: {
+        justifyContent:'flex-start',
         [theme.fn.largerThan('sm')]: {
+            display:'flex',
             flexDirection: 'column',
             alignItems: 'center',
         }
@@ -41,10 +52,8 @@ export const useCategoriesStyles = createStyles((theme) => ({
 
         [theme.fn.largerThan('sm')]: {
             height:240,
-            
-        }
-
-    }
+        },
+    },
 
 
 }))

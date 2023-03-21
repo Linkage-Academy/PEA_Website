@@ -1,26 +1,43 @@
-import { Button, Stack, Group, Card, Overlay, Title, BackgroundImage, Text, Box } from '@mantine/core';
+import { Button, Stack, Group, Card, Overlay, Title, BackgroundImage, Text, Box, MediaQuery} from '@mantine/core';
 import React from 'react';
+import {useMediaQuery} from "@mantine/hooks";
+import {useTheme} from "@emotion/react";
+
 //import infantil from './static/categoryInfantil.svg';
 import { useCategoriesStyles } from '../Categories.styles';
 
-function MobileCard(props){
+export function MobileCard(props){
     const {classes} = useCategoriesStyles();
-    const {categoryName, backgroundImage, description} = props;
+    const {categoryName, description, backgroundImage} = props;
     return(
-        <Card className={classes.categoryContainer}  shadow={'md'} p={0} mx={'sm'}>
-        <BackgroundImage src={backgroundImage} radius="sm" className={classes.backgroundImageStyle} shadow={'md'}>
-            <Group className={classes.categoryContentLayout} align='center' h={"100%"} px={'md'} noWrap>
-                <Stack spacing={0} sx={{ alignContent:'center'}}>
-                    <Text sx={{color:'white', fontWeight:'bold', fontSize:'1rem',textShadow:' 0px 4px 4px rgba(0, 0, 0, 0.25)' }}>{categoryName}</Text>
+        <Card className={classes.categoryMobileContainer} sx={{backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover'}}  shadow={'md'} mx={'sm'}>
+            <Group className={classes.categoryContentLayout}  h={"100%"}  noWrap>
+                <Stack  noWrap>
+                    <Text sx={{color:'white', fontWeight:'bold', fontSize:'1rem',textShadow:' 0px 4px 4px rgba(0, 0, 0, 0.25)',  }}>{categoryName}</Text>
                     <Text sx={{color:'white', fontSize:'0.75rem', textShadow:' 0px 4px 4px rgba(0, 0, 0, 0.25)'}}>{description}</Text>
                 </Stack>
-                <Box sx={{display:'flex', flexGrow:1, justifyContent:'center'}}>
+                <Box >
                     <Button className={classes.cardButton}  color="red.6" >Leer Más</Button>
-                </Box>        
-            </Group>
+                </Box>
+            </Group>     
+        </Card>
+    )
+}
 
-        </BackgroundImage>
-        
+export function DesktopCard(props){
+    const {classes} = useCategoriesStyles();
+    
+    const {categoryName, description, backgroundImage} = props;
+    return(
+        <Card className={classes.categoryContainer} sx={{backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover',}} shadow={'md'} >
+        {/*<MobileCard categoryName={categoryName} backgroundImage={backgroundImage} description={description}/>*/}
+
+                <Stack pb={'md'}>
+                    <Text pb={0} sx={{color:'white', fontWeight:'bold', fontSize:'1.37rem',textShadow:' 0px 4px 4px rgba(0, 0, 0, 0.25)' }}>{categoryName}</Text>
+                    <Text sx={{color:'white', fontSize:'0.875rem', textShadow:' 0px 4px 4px rgba(0, 0, 0, 0.25)'}}>{description}</Text>
+                </Stack>
+                <Button color="red.6">Leer Más</Button>
+            
         </Card>
     )
 }
@@ -28,20 +45,16 @@ function MobileCard(props){
 
 
 function CategoryCard(props){
-
+   const theme = useTheme();
    const {classes} = useCategoriesStyles();
-   const {categoryName, backgroundImage, description} = props;
+   const {categoryName, description} = props;
+   const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
     return( 
-        <Card className={classes.categoryContainer}  shadow={'md'} p={0} mx={'sm'}>
-        {/*<MobileCard categoryName={categoryName} backgroundImage={backgroundImage} description={description}/>*/}
-            <BackgroundImage src={backgroundImage}>
-                <Stack >
-                    <Text sx={{color:'white', fontWeight:'bold', fontSize:'1rem',textShadow:' 0px 4px 4px rgba(0, 0, 0, 0.25)' }}>{categoryName}</Text>
-                    <Text sx={{color:'white', fontSize:'0.75rem', textShadow:' 0px 4px 4px rgba(0, 0, 0, 0.25)'}}>{description}</Text>
-                </Stack>
-                <Button color="red.6">Leer Más</Button>
-            </BackgroundImage>
-        </Card>
+        <>
+            {isLargeScreen ?
+                <DesktopCard categoryName={categoryName} description={description}/> 
+                : <MobileCard categoryName={categoryName} description={description}/>}
+        </>
     )
 }
 export default CategoryCard;
