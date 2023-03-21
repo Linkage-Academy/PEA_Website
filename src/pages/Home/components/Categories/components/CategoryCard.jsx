@@ -30,8 +30,6 @@ export function DesktopCard(props){
     const {categoryName, description, backgroundImage} = props;
     return(
         <Card className={classes.categoryContainer} sx={{backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover',}} shadow={'md'} >
-        {/*<MobileCard categoryName={categoryName} backgroundImage={backgroundImage} description={description}/>*/}
-
                 <Stack pb={'md'}>
                     <Text pb={0} sx={{color:'white', fontWeight:'bold', fontSize:'1.37rem',textShadow:' 0px 4px 4px rgba(0, 0, 0, 0.25)' }}>{categoryName}</Text>
                     <Text sx={{color:'white', fontSize:'0.875rem', textShadow:' 0px 4px 4px rgba(0, 0, 0, 0.25)'}}>{description}</Text>

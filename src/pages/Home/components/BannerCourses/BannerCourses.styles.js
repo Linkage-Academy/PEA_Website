@@ -1,10 +1,15 @@
 import { createStyles} from '@mantine/core';
 
-export const useBannerMinecraftStyles = createStyles((theme) => ({
+export const useBannerCoursestStyles = createStyles((theme) => ({
 
     bannerButton: {
         width:'50%',
         height:'50px',
+        fontSize: '0.75rem',
+        borderRadius: '10px',
+    },
+
+    mobileBannerButton: {
         fontSize: '0.75rem',
         borderRadius: '10px',
     },

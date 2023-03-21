@@ -8,23 +8,21 @@ function BannerMinecraft() {
 
     const {classes} = useBannerMinecraftStyles();
     return (
-        <Group m={'md'} p={0} sx={{justifyContent: 'space-around',}}>
+        <Group m={'sm'} p={0}  grow>
             <Card
                 shadow="sm"
-                sx={{backgroundColor: '#0CA678', flexGrow: 1}}
+                sx={{backgroundColor: '#0CA678'}}
                 h={184}
-                w='42%'
-                p={'sm'}
-                m={0}
+                p={'xs'}    
             >
-                <Stack>
+                <Stack sx={{ width:'100%'}} >
                     <Text className={classes.textStyle} mt={'xs'} color="white" align='center'>
-                        Cultiva las Habilidades STEM con Minecraft
+                        Cultiva las Habilidades STEM con Minecraft 
                     </Text>
-                    <Button className={classes.bannerButton} color='red.6'>¡Inscribite Ahora!</Button>
+                    <Button className={classes.mobileBannerButton} color='red.6' align='start'>¡Inscribite!</Button>
                 </Stack>
             </Card>
-            <Image maw={'45%'} radius="md" src={minecraft3dImage} alt="Random image"/>
+            <Image maw={'42%'} radius="md" src={minecraft3dImage} alt="Random image"/>
         </Group>
     )
 }

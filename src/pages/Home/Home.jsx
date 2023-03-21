@@ -1,12 +1,14 @@
-import {Box, Stack} from "@mantine/core";
+import {Box, Stack, Text} from "@mantine/core";
 import HomeHero from "./components/HomeHero/HomeHero";
 import Categories from "./components/Categories/Categories";
 import BannerMinecraft from "./components/BannerMinecraft/BannerMinecraft";
+import BannerDesktopMinecraft from "./components/BannerMinecraft/BannerDesktopMinecraft";
 import HeaderComponent from "./components/HomeHero/components/HeaderComponent";
 import React from "react";
 import {useHomeHeroStyles} from "./components/HomeHero/HomeHero.styles";
 import {useTheme} from "@emotion/react";
 import {useMediaQuery} from "@mantine/hooks";
+import BannerCourses from "./components/BannerCourses/BannerCourses";
 
 
 function Home() {
@@ -17,7 +19,6 @@ function Home() {
     return (
         <>
             <Stack spacing={0} sx={{position: "relative"}}>
-
                 <HeaderComponent/>
                 <Box className={classes.rightSidebar}/>
 
@@ -28,8 +29,15 @@ function Home() {
 
             <Stack px={xPadding}>
                 <Categories/>
-                <BannerMinecraft/>
+                {isLargeScreen ?
+                <BannerDesktopMinecraft/>
+                : 
+                  <BannerMinecraft/>
+                  }
+
+                <BannerCourses/>
             </Stack>
+            
 
         </>
     )
