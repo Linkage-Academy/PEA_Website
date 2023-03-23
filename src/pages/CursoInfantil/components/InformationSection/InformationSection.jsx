@@ -47,10 +47,10 @@ function InformationSection() {
             </Box>
 
 
-            <Box className={gridClasses.gridCard}>
+            <Center className={gridClasses.gridCard}>
                 <CourseDescriptionCard className={gridClasses.gridCard} mainImage={Mansion} bkColor={"#0CA678"}
                                        btnColor={"teal.7"}/>
-            </Box>
+            </Center>
 
             <Box className={gridClasses.gridPlaying}>
                 <StackBanner mainImage={stackBannerImg} title={stackBannerTitle}/>
