@@ -6,8 +6,8 @@ import ColoredHeader from "../ColoredHeader";
 import Hero from "../Hero";
 import {useHeroHeaderStyles} from "./HeroHeader.styles";
 
-function HeroHeader({color, title, rightSection}) {
-    const {classes} = useHeroHeaderStyles();
+function HeroHeader({color, title, rightSection, barColorIndex}) {
+    const {classes} = useHeroHeaderStyles({color, barColorIndex});
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
     const xPadding = isLargeScreen ? 128 : "xs";

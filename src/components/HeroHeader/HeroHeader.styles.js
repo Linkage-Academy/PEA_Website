@@ -1,10 +1,10 @@
 import {createStyles} from "@mantine/core";
 
-export const useHeroHeaderStyles = createStyles((theme) => ({
+export const useHeroHeaderStyles = createStyles((theme, props) => ({
     rightSidebar: {
         height: "100%",
         width: "25%",
-        backgroundColor: theme.colors["teal"][6],
+        backgroundColor: props.color ? theme.colors[props.color][props.barColorIndex]: theme.colors["teal"][6], 
         position: "absolute",
         zIndex: -1,
         alignSelf: "flex-end",
@@ -14,3 +14,5 @@ export const useHeroHeaderStyles = createStyles((theme) => ({
         }
     }
 }))
+
+//"teal"
