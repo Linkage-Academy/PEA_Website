@@ -3,11 +3,11 @@ import React from "react";
 import {useTheme} from "@emotion/react";
 import {useMediaQuery} from "@mantine/hooks";
 import GroupBanner from "./components/GroupBanner/GroupBanner";
-import Modules from "../CursoInfantil/components/Modules/Modules";
 import npc from './static/npc.webp';
 import Land3d from './static/minecraftLand3d.webp';
 import HeroHeader from "../../components/HeroHeader";
 import InformationSection from "./components/InformationSection";
+import ModulesSection from "./components/ModulesSection";
 
 
 const groupBannerTitle = '¿Por qué aprender con Minecraft?';
@@ -25,7 +25,8 @@ function CursoInfantil() {
         <Box px={xPadding}>
 
             <InformationSection/>
-            <Modules/>
+            <ModulesSection/>
+
             <GroupBanner
                 img={npc}
                 title={groupBannerTitle}
