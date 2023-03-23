@@ -10,8 +10,9 @@ import {
 } from '@tabler/icons-react';
 
 
-function CourseDescriptionCard(props) {
-    const {mainImage} = props;
+function CourseDescriptionCard({mainImage, bkColor, btnColor}) {
+
+    console.log(bkColor)
     const description = ['Principiante', '4 Horas', '8-14 años', 'Si', 'Si', '96 Lecciones']
     const title = ['Nivel', 'Horas Semanales', 'Edad', 'Certificado', 'Insignia Digital', 'Lecciones']
     return (
@@ -29,32 +30,32 @@ function CourseDescriptionCard(props) {
                 <Group noWrap w={"100%"}>
                     <Stack sx={{flexGrow: 1}}>
                         <Group>
-                            <IconChartArrowsVertical color='#0CA678'/>
+                            <IconChartArrowsVertical color={bkColor}/>
                             <Text>{title[0]}</Text>
                         </Group>
 
                         <Group>
-                            <IconClockHour5 color='#0CA678'/>
+                            <IconClockHour5 color={bkColor}/>
                             <Text>{title[1]}</Text>
                         </Group>
 
                         <Group>
-                            <IconUsers color='#0CA678'/>
+                            <IconUsers color={bkColor}/>
                             <Text>{title[2]}</Text>
                         </Group>
 
                         <Group>
-                            <IconFileCertificate color='#0CA678'/>
+                            <IconFileCertificate color={bkColor}/>
                             <Text>{title[3]}</Text>
                         </Group>
 
                         <Group>
-                            <IconRosette color='#0CA678'/>
+                            <IconRosette color={bkColor}/>
                             <Text>{title[4]}</Text>
                         </Group>
 
                         <Group>
-                            <IconSchool color='#0CA678'/>
+                            <IconSchool color={bkColor}/>
                             <Text>{title[5]}</Text>
                         </Group>
                     </Stack>
@@ -71,7 +72,7 @@ function CourseDescriptionCard(props) {
                     </Stack>
 
                 </Group>
-                <Button color={'teal.8'} fullWidth size={"md"}>Inscribite</Button>
+                <Button color={btnColor} fullWidth size={"md"}>Inscribite</Button>
 
             </Stack>
         </Card>

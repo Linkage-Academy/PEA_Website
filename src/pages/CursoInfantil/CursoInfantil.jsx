@@ -18,6 +18,7 @@ import HeroHeader from "../../components/HeroHeader";
 const groupBannerTitle = '¿Por qué aprender con Minecraft?';
 const groupBannerDescription = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin et enim  incidunt laoreet. Nunc auc tor eu ante in blandit. In interdum vel elit eu sollicitudin Ut pretium blandit tincidunt. Vestibulum congue est  felis, at tristique tellus rhoncus eu. Nunc placerat tellus ex.';
 const stackBannerTitle = 'Aprende Jugando';
+const themeMantineColor = ['teal', '7',];
 
 
 function CursoInfantil() {
@@ -27,7 +28,7 @@ function CursoInfantil() {
     return (
         <>
             <HeroHeader color={"teal"} title={"!Diviertete Aprendiendo con Minecraft!"}
-                        rightSection={<Image src={Land3d}/>}/>
+                        rightSection={<Image src={Land3d}/>} barColorIndex={themeMantineColor[1]}/>
 
 
             <Stack pt={18} px={xPadding}>
@@ -39,7 +40,7 @@ function CursoInfantil() {
                            leftSection={<Center><IconMath size={22}/></Center>}>Lógica</Badge>
                 </Group>
 
-                <CourseDescriptionCard mainImage={Mansion}/>
+                <CourseDescriptionCard mainImage={Mansion} bkColor={"#0CA678"} btnColor={"teal.7"}/>
                 <StackBanner mainImage={stackBannerImg} title={stackBannerTitle}/>
                 <Modules/>
                 <GroupBanner img={npc} title={groupBannerTitle} description={groupBannerDescription}></GroupBanner>
