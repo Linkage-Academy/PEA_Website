@@ -1,9 +1,8 @@
-import {Badge, Box, Center, Group, Stack} from "@mantine/core";
+import {Badge, Box, Center, Group, Image, Stack} from "@mantine/core";
 import React from "react";
 import {useTheme} from "@emotion/react";
 import {useMediaQuery} from "@mantine/hooks";
 import HeaderComponent from '../Home/components/HomeHero/components/HeaderComponent';
-import HomeHero from '../Home/components/HomeHero/HomeHero';
 import {useCursoInfantilStyles} from "./CursoInfantil.styles";
 import GroupBanner from "./components/GroupBanner/GroupBanner";
 import character from './static/char3d.webp';
@@ -15,6 +14,7 @@ import Modules from "../CursoInfantil/components/Modules/Modules";
 import npc from './static/npc.webp';
 import Land3d from './static/minecraftLand3d.webp';
 import {IconBrush, IconMath} from "@tabler/icons-react";
+import Hero from "../../components/Hero";
 
 
 const groupBannerTitle = '¿Por qué aprender con Minecraft?';
@@ -34,7 +34,11 @@ function CursoInfantil() {
                 <Box className={classes.rightSidebar}/>
 
                 <Box pl={xPadding} pr={isLargeScreen ? xPadding / 2 : xPadding} my={"md"}>
-                    <HomeHero color={"teal"} title={"!Diviertete Aprendiendo con Minecraft!"} image={Land3d}/>
+                    <Hero
+                        color={"teal"}
+                        title={"!Diviertete Aprendiendo con Minecraft!"}
+                        rightSection={<Image src={Land3d}/>}
+                    />
                 </Box>
             </Stack>
 
