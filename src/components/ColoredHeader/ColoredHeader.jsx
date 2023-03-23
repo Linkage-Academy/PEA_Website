@@ -34,15 +34,21 @@ function ColoredHeader({color}) {
                 <Drawer opened={opened} onClose={close} zIndex={1000}>
                     <Stack>
                         <Anchor component={Link} to={"/"} color={"black"} className={classes.activeLink}>Inicio</Anchor>
-                        <Anchor component={Link} to={"/"} color={"black"} underline={false}>Cursos</Anchor>
-                        <Anchor component={Link} to={"/"} color={"black"} underline={false}>Aula Virtual</Anchor>
+                        <Anchor component={Link} to={"/cursoprogramacioninfantil"} color={"black"} underline={false}>Curso
+                            Minecraft</Anchor>
+                        <Anchor component={Link} to={"/cursoweb"} color={"black"} underline={false}>Cursos Web</Anchor>
+                        <Anchor href={"https://academy.linkageacademy.com/login"} color={"black"}
+                                underline={false}>Aula Virtual</Anchor>
                     </Stack>
                 </Drawer>
 
                 <Group className={classes.desktopNavbar} spacing={"xl"}>
                     <Anchor component={Link} to={"/"} color={"white"} className={classes.activeLink}>Inicio</Anchor>
-                    <Anchor component={Link} to={"/"} color={"white"} underline={false}>Cursos</Anchor>
-                    <Anchor component={Link} to={"/"} color={"white"} underline={false}>Aula Virtual</Anchor>
+                    <Anchor component={Link} to={"/cursoprogramacioninfantil"} color={"white"} underline={false}>Curso
+                        Minecraft</Anchor>
+                    <Anchor component={Link} to={"/cursoweb"} color={"white"} underline={false}>Cursos Web</Anchor>
+                    <Anchor href={"https://academy.linkageacademy.com/login"} color={"white"}
+                            underline={false}>Aula Virtual</Anchor>
 
                     <Button
                         className={classes.desktopNavbarCTA}
