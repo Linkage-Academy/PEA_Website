@@ -38,7 +38,7 @@ function CursoInfantil() {
                     <HomeHero color={"teal"} title={"!Diviertete Aprendiendo con Minecraft!"} image={minecraftLand3d}/>
                 </Box>
             </Stack>
-            <Stack pt={'md'} px={xPadding}>
+            <Stack pt={18} px={xPadding}>
                 <GroupBanner img={character} title={groupBannerTitle} description={groupBannerDescription}/>
                 <Group noWrap>
                     <BannerCard icon={brushIcon}/>
