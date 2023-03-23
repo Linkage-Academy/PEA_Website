@@ -1,13 +1,38 @@
 import {createStyles} from '@mantine/core';
 
 export const useGroupBannerStyles = createStyles((theme) => ({
+    grid: {
+        display: "grid",
+        gridTemplateAreas: `"title title " "content image" "bottomSection bottomSection"`,
 
-    cardShadow: {
-        filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
+        [theme.fn.largerThan("sm")]: {
+            gridTemplateAreas: `"title image" "content image"  "bottomSection image"`
+        }
     },
-    bannerCardLayout: {
-        justifyContent: "center"
+
+    gridTitle: {
+        gridArea: "title",
+        fontSize: 20,
+
+        [theme.fn.largerThan("sm")]: {
+            fontSize: 24
+        }
+    },
+
+    gridContent: {
+        gridArea: "content",
+        fontSize: 14,
+
+        [theme.fn.largerThan("sm")]: {
+            fontSize: 16
+        }
+    },
+
+    gridImage: {
+        gridArea: "image"
+    },
+
+    gridBottomSection: {
+        gridArea: "bottomSection"
     }
-
-
 }))
