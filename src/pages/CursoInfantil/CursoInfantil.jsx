@@ -1,8 +1,7 @@
-import {Badge, Box, Center, Group, Image, Stack} from "@mantine/core";
+import {Badge, Center, Group, Image, Stack} from "@mantine/core";
 import React from "react";
 import {useTheme} from "@emotion/react";
 import {useMediaQuery} from "@mantine/hooks";
-import {useCursoInfantilStyles} from "./CursoInfantil.styles";
 import GroupBanner from "./components/GroupBanner/GroupBanner";
 import character from './static/char3d.webp';
 import CourseDescriptionCard from "./components/CourseDescriptionCard/CourseDescriptionCard";
@@ -13,8 +12,7 @@ import Modules from "../CursoInfantil/components/Modules/Modules";
 import npc from './static/npc.webp';
 import Land3d from './static/minecraftLand3d.webp';
 import {IconBrush, IconMath} from "@tabler/icons-react";
-import Hero from "../../components/Hero";
-import ColoredHeader from "../../components/ColoredHeader";
+import HeroHeader from "../../components/HeroHeader";
 
 
 const groupBannerTitle = '¿Por qué aprender con Minecraft?';
@@ -23,24 +21,14 @@ const stackBannerTitle = 'Aprende Jugando';
 
 
 function CursoInfantil() {
-    const {classes} = useCursoInfantilStyles();
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
     const xPadding = isLargeScreen ? 128 : "xs";
     return (
         <>
-            <Stack spacing={0} sx={{position: "relative"}}>
-                <ColoredHeader color={"teal"}/>
-                <Box className={classes.rightSidebar}/>
+            <HeroHeader color={"teal"} title={"!Diviertete Aprendiendo con Minecraft!"}
+                        rightSection={<Image src={Land3d}/>}/>
 
-                <Box pl={xPadding} pr={isLargeScreen ? xPadding / 2 : xPadding} my={"md"}>
-                    <Hero
-                        color={"teal"}
-                        title={"!Diviertete Aprendiendo con Minecraft!"}
-                        rightSection={<Image src={Land3d}/>}
-                    />
-                </Box>
-            </Stack>
 
             <Stack pt={18} px={xPadding}>
                 <GroupBanner img={character} title={groupBannerTitle} description={groupBannerDescription}/>

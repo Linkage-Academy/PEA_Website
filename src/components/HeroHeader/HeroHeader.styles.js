@@ -1,6 +1,6 @@
-import {createStyles} from '@mantine/core';
+import {createStyles} from "@mantine/core";
 
-export const useCursoInfantilStyles = createStyles((theme) => ({
+export const useHeroHeaderStyles = createStyles((theme) => ({
     rightSidebar: {
         height: "100%",
         width: "25%",
