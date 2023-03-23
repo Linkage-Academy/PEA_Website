@@ -8,13 +8,13 @@ import {
     IconSchool,
     IconUsers
 } from '@tabler/icons-react';
+import {useCourseDescriptionCardStyles} from "./CourseDescriptionCard.styles";
 
 
 function CourseDescriptionCard({mainImage, bkColor, btnColor}) {
-
-    console.log(bkColor)
     const description = ['Principiante', '4 Horas', '8-14 años', 'Si', 'Si', '96 Lecciones']
     const title = ['Nivel', 'Horas Semanales', 'Edad', 'Certificado', 'Insignia Digital', 'Lecciones']
+    const {classes} = useCourseDescriptionCardStyles()
     return (
         <Card shadow="sm" padding="lg" radius="md" withBorder>
             <Card.Section component="a">
@@ -25,10 +25,11 @@ function CourseDescriptionCard({mainImage, bkColor, btnColor}) {
                 />
             </Card.Section>
             <Stack sx={{textAlign: "center"}} align={"center"}>
-                <Title order={4} fw={500} pt={"1rem"}>Introducción al Mundo de la Programación</Title>
+                <Title order={4} fw={500} pt={"1rem"}>Introduccion a la Programación para Minecraft for
+                    Education</Title>
 
-                <Group noWrap w={"100%"}>
-                    <Stack sx={{flexGrow: 1}}>
+                <Group noWrap w={"100%"} className={classes.labelsCard}>
+                    <Stack sx={{flexGrow: 1}} spacing={"1.2rem"}>
                         <Group>
                             <IconChartArrowsVertical color={bkColor}/>
                             <Text>{title[0]}</Text>
@@ -60,9 +61,7 @@ function CourseDescriptionCard({mainImage, bkColor, btnColor}) {
                         </Group>
                     </Stack>
 
-                    <Stack sx={{
-                        textAlign: "start"
-                    }}>
+                    <Stack sx={{textAlign: "start"}} spacing={"1.2rem"}>
                         <Text color={'dark.3'}>{description[0]}</Text>
                         <Text color={'dark.3'}>{description[1]}</Text>
                         <Text color={'dark.3'}>{description[2]}</Text>
