@@ -3,6 +3,7 @@ import {MantineProvider} from "@mantine/core";
 import {Notifications} from "@mantine/notifications";
 import Home from "./pages/Home";
 import CursoInfantil from "./pages/CursoInfantil";
+import CursoWeb from "./pages/CursoWeb";
 
 
 function App() {
@@ -12,9 +13,14 @@ function App() {
             element: <Home/>,
         },
         {
-            path:"/cursoProgramacionInfantil",
+            path:"/cursoprogramacioninfantil",
             element: <CursoInfantil/>
         },
+        {
+            path:"/cursoweb",
+            element:<CursoWeb/>
+
+        }
     ]);
     return <RouterProvider router={routes}/>;
 }

@@ -4,16 +4,16 @@ import {useTheme} from "@emotion/react";
 import {useMediaQuery} from "@mantine/hooks";
 import HeaderComponent from '../Home/components/HomeHero/components/HeaderComponent';
 import HomeHero from '../Home/components/HomeHero/HomeHero';
-import {useCursoInfantilStyles} from "./CursoInfantil.styles";
-import GroupBanner from "./components/GroupBanner/GroupBanner";
-import character from './static/char3d.webp';
-import CourseDescriptionCard from "./components/CourseDescriptionCard/CourseDescriptionCard";
-import Mansion from './static/Mansion.webp';
-import StackBanner from "./components/StackBanner/StackBanner";
-import stackBannerImg from './static/avatar.webp';
-import Modules from "../CursoInfantil/components/Modules/Modules";
-import npc from './static/npc.webp';
-import Land3d from './static/minecraftLand3d.webp';
+import {useCursoInfantilStyles} from "/../CursoInfantilCursoInfantil.styles";
+import GroupBanner from "../CursoInfantil/components/GroupBanner/GroupBanner";
+import character from '../CursoInfantil/static/char3d.webp';
+import CourseDescriptionCard from "../CursoInfantil/components/CourseDescriptionCard/CourseDescriptionCard";
+import Mansion from '../CursoInfantil/static/Mansion.webp';
+import StackBanner from "../CursoInfantil/components/StackBanner/StackBanner";
+import stackBannerImg from '../CursoInfantil/static/avatar.webp';
+import Modules from "./components/Modules/Modules";
+import npc from '../CursoInfantil/static/npc.webp';
+import minecraftLand3d from './static/miecraftLand3d.webp';
 import {IconBrush, IconMath} from "@tabler/icons-react";
 
 
@@ -22,7 +22,7 @@ const groupBannerDescription = 'Lorem ipsum dolor sit amet, consectetur adipisci
 const stackBannerTitle = 'Aprende Jugando';
 
 
-function CursoInfantil() {
+function CursoWeb() {
     const {classes} = useCursoInfantilStyles();
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
@@ -34,7 +34,7 @@ function CursoInfantil() {
                 <Box className={classes.rightSidebar}/>
 
                 <Box pl={xPadding} pr={isLargeScreen ? xPadding / 2 : xPadding} my={"md"}>
-                    <HomeHero color={"teal"} title={"!Diviertete Aprendiendo con Minecraft!"} image={Land3d}/>
+                    <HomeHero color={"teal"} title={"!Diviertete Aprendiendo con Minecraft!"} image={minecraftLand3d}/>
                 </Box>
             </Stack>
             <Stack pt={18} px={xPadding}>
@@ -56,4 +56,4 @@ function CursoInfantil() {
     )
 }
 
-export default CursoInfantil;
+export default CursoWeb;
