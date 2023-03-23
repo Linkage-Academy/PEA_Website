@@ -1,6 +1,5 @@
 import {Button, Card, Group, Image, Stack, Text, Title} from '@mantine/core';
 import React from 'react';
-import {useCourseDescriptionCardStyles} from './CourseDescriptionCard.styles';
 import {
     IconChartArrowsVertical,
     IconClockHour5,
@@ -12,7 +11,6 @@ import {
 
 
 function CourseDescriptionCard(props) {
-    const {classes} = useCourseDescriptionCardStyles();
     const {mainImage} = props;
     const description = ['Principiante', '4 Horas', '8-14 años', 'Si', 'Si', '96 Lecciones']
     const title = ['Nivel', 'Horas Semanales', 'Edad', 'Certificado', 'Insignia Digital', 'Lecciones']
@@ -73,10 +71,9 @@ function CourseDescriptionCard(props) {
                     </Stack>
 
                 </Group>
-
+                <Button color={'teal.8'} fullWidth size={"md"}>Inscribite</Button>
 
             </Stack>
-            <Button color={'teal.9'} w={'60%'} mt={'xl'}>Inscribite</Button>
         </Card>
     )
 }

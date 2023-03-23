@@ -4,17 +4,16 @@ import {useTheme} from "@emotion/react";
 import {useMediaQuery} from "@mantine/hooks";
 import HeaderComponent from '../Home/components/HomeHero/components/HeaderComponent';
 import HomeHero from '../Home/components/HomeHero/HomeHero';
-import {useCursoInfantilStyles} from "/../CursoInfantilCursoInfantil.styles";
 import GroupBanner from "../CursoInfantil/components/GroupBanner/GroupBanner";
 import character from '../CursoInfantil/static/char3d.webp';
 import CourseDescriptionCard from "../CursoInfantil/components/CourseDescriptionCard/CourseDescriptionCard";
 import Mansion from '../CursoInfantil/static/Mansion.webp';
 import StackBanner from "../CursoInfantil/components/StackBanner/StackBanner";
 import stackBannerImg from '../CursoInfantil/static/avatar.webp';
-import Modules from "./components/Modules/Modules";
 import npc from '../CursoInfantil/static/npc.webp';
-import minecraftLand3d from './static/miecraftLand3d.webp';
 import {IconBrush, IconMath} from "@tabler/icons-react";
+import {useCursoInfantilStyles} from "../CursoInfantil/CursoInfantil.styles";
+import Modules from "../CursoInfantil/components/Modules/Modules";
 
 
 const groupBannerTitle = '¿Por qué aprender con Minecraft?';
@@ -34,7 +33,7 @@ function CursoWeb() {
                 <Box className={classes.rightSidebar}/>
 
                 <Box pl={xPadding} pr={isLargeScreen ? xPadding / 2 : xPadding} my={"md"}>
-                    <HomeHero color={"teal"} title={"!Diviertete Aprendiendo con Minecraft!"} image={minecraftLand3d}/>
+                    <HomeHero color={"teal"} title={"!Diviertete Aprendiendo con Minecraft!"}/>
                 </Box>
             </Stack>
             <Stack pt={18} px={xPadding}>
