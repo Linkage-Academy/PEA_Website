@@ -7,9 +7,11 @@ import {useDisclosure} from "@mantine/hooks";
 
 
 
-function HeaderComponent() {
-    const {classes} = useHomeHeroStyles();
-    const [opened, {toggle, close}] = useDisclosure(false)
+function HeaderComponent(props) {
+    const {backColor} = props;
+    const {classes} = useHomeHeroStyles({backColor});
+    const [opened, {toggle, close}] = useDisclosure(false);
+
 
     return (
         <Header className={classes.header} pr={"xl"} height={"auto"}>

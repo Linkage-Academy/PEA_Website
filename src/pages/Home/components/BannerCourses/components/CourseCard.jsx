@@ -1,36 +1,38 @@
-import {Button, Card, Group, Image, Stack, Text, Badge} from '@mantine/core';
+import {Button, Card, Group, Image, Stack, Text, Badge, Box} from '@mantine/core';
 import React from 'react';
 import { useBannerCoursestStyles } from '../BannerCourses.styles';
 
 
-function CourseCard() {
+function CourseCard(props) {
 
+    const {mainImage, title, description} = props;
     const {classes} = useBannerCoursestStyles();
     return (
         <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Card.Section component="a" href="https://mantine.dev/">
+            <Card.Section component="a" >
                 <Image
-                src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
-                height={160}
+                src={mainImage}
+                height={220}
                 alt="Norway"
                 />
             </Card.Section>
 
         <Group position="apart" mt="md" mb="xs">
-            <Text weight={500}>Norway Fjord Adventures</Text>
+            <Text weight={500} sx={{fontSize:'1.25rem', fontFamily:'Merriweather', }}>{title}</Text>
             <Badge color="pink" variant="light">
-            On Sale
+            Disponible
             </Badge>
         </Group>
 
-        <Text size="sm" color="dimmed">
-            With Fjord Tours you can explore more of the magical fjord landscapes with tours and
-            activities on and around the fjords of Norway
+        <Text size="sm" color="dimmed" className={classes.textStyle}>
+            {description}
         </Text>
+        <Box  className={classes.buttonContainer}>
+            <Button  color='red.6' fullWidth mt="md" radius="md">
+                Explorar
+            </Button>
+        </Box>
 
-        <Button variant="light" color="blue" fullWidth mt="md" radius="md">
-            Book classic tour now
-        </Button>
         </Card>
     )
 }

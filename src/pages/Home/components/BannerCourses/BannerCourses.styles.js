@@ -2,30 +2,25 @@ import { createStyles} from '@mantine/core';
 
 export const useBannerCoursestStyles = createStyles((theme) => ({
 
-    bannerButton: {
-        width:'50%',
-        height:'50px',
-        fontSize: '0.75rem',
-        borderRadius: '10px',
-    },
-
-    mobileBannerButton: {
-        fontSize: '0.75rem',
-        borderRadius: '10px',
-    },
-
-    textStyle: {
+    textStyle:{
         fontFamily: 'Merriweather',
-        fontStyle: 'normal',
-        fontWeight: '400',
-        fontSize: '1.25rem',
-        lineHeight: '25px',
-        textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+        fontSize:'1rem',
     },
 
-    cardShadow: {
-        filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
+    desktopLayout:{
+        [theme.fn.largerThan('sm')]: {
+            display:'flex',
+            flexDirection:'row'
+        },
+    },
+
+    buttonContainer:{
+        width: '100%',
+        [theme.fn.largerThan('sm')]: {
+            width:'50%'
+        },  
     }
+
 
 
 

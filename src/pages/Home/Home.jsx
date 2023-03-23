@@ -11,6 +11,8 @@ import {useMediaQuery} from "@mantine/hooks";
 import BannerCourses from "./components/BannerCourses/BannerCourses";
 
 
+
+
 function Home() {
     const {classes} = useHomeHeroStyles()
     const theme = useTheme()
@@ -19,7 +21,7 @@ function Home() {
     return (
         <>
             <Stack spacing={0} sx={{position: "relative"}}>
-                <HeaderComponent/>
+                <HeaderComponent backColor='red'/>
                 <Box className={classes.rightSidebar}/>
 
                 <Box pl={xPadding} pr={isLargeScreen ? xPadding / 2 : xPadding} my={"md"}>

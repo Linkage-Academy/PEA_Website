@@ -2,6 +2,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {MantineProvider} from "@mantine/core";
 import {Notifications} from "@mantine/notifications";
 import Home from "./pages/Home";
+import CursoInfantil from "./pages/CursoInfantil";
 
 
 function App() {
@@ -9,6 +10,10 @@ function App() {
         {
             path: "/",
             element: <Home/>,
+        },
+        {
+            path:"/cursoProgramacionInfantil",
+            element: <CursoInfantil/>
         },
     ]);
     return <RouterProvider router={routes}/>;
