@@ -1,15 +1,17 @@
-import {Button, Card, Group, Image, Stack, Text, Box, Title} from '@mantine/core';
+import {Box, Group, Text} from '@mantine/core';
 import React from 'react';
-import { useCourseDescriptionCardStyles } from '../CourseDescriptionCard.styles';
 
-function DescriptionContent(props){
-    const {classes} = useCourseDescriptionCardStyles();
+function DescriptionContent(props) {
     const {icon, title, description} = props;
-    return(
-        <Group noWrap>
-            {icon}
-            <Text w={'40%'}>{title}</Text>
-            <Text color={'dark.3'}>{description}</Text>
+    return (
+        <Group noWrap w={"100%"}>
+            <Group sx={{flexGrow: 1}}>
+                {icon}
+                <Text>{title}</Text>
+            </Group>
+            <Box>
+                <Text color={'dark.3'}>{description}</Text>
+            </Box>
         </Group>
     )
 }

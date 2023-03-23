@@ -45,7 +45,9 @@ function CursoInfantil() {
                     <Badge size={"xl"} variant={"filled"} color={"teal.7"} radius={"md"}
                            leftSection={<Center><IconMath size={22}/></Center>}>Lógica</Badge>
                 </Group>
+
                 <CourseDescriptionCard mainImage={Mansion}/>
+
                 <StackBanner mainImage={stackBannerImg} title={stackBannerTitle}/>
                 <Modules/>
                 <GroupBanner img={npc} title={groupBannerTitle} description={groupBannerDescription}></GroupBanner>
