@@ -1,4 +1,4 @@
-import {Box, Group, Stack} from "@mantine/core";
+import {Badge, Box, Center, Group, Stack} from "@mantine/core";
 import React from "react";
 import {useTheme} from "@emotion/react";
 import {useMediaQuery} from "@mantine/hooks";
@@ -7,8 +7,6 @@ import HomeHero from '../Home/components/HomeHero/HomeHero';
 import {useCursoInfantilStyles} from "./CursoInfantil.styles";
 import GroupBanner from "./components/GroupBanner/GroupBanner";
 import character from './static/char3d.webp';
-import BannerCard from "./components/GroupBanner/components/BannerCard";
-import brushIcon from './components/GroupBanner/static/brush.svg';
 import CourseDescriptionCard from "./components/CourseDescriptionCard/CourseDescriptionCard";
 import Mansion from './static/Mansion.webp';
 import StackBanner from "./components/StackBanner/StackBanner";
@@ -16,6 +14,7 @@ import stackBannerImg from './static/avatar.webp';
 import Modules from "./components/Modules/Modules";
 import npc from './static/npc.webp';
 import minecraftLand3d from './static/minecraftLand3d.webp';
+import {IconBrush, IconMath} from "@tabler/icons-react";
 
 
 const groupBannerTitle = '¿Por qué aprender con Minecraft?';
@@ -40,9 +39,11 @@ function CursoInfantil() {
             </Stack>
             <Stack pt={18} px={xPadding}>
                 <GroupBanner img={character} title={groupBannerTitle} description={groupBannerDescription}/>
-                <Group noWrap>
-                    <BannerCard icon={brushIcon}/>
-                    <BannerCard icon={brushIcon}/>
+                <Group noWrap spacing={"xs"}>
+                    <Badge size={"xl"} variant={"filled"} color={"teal.7"} radius={"md"}
+                           leftSection={<Center><IconBrush size={22}/></Center>}>Imaginación</Badge>
+                    <Badge size={"xl"} variant={"filled"} color={"teal.7"} radius={"md"}
+                           leftSection={<Center><IconMath size={22}/></Center>}>Lógica</Badge>
                 </Group>
                 <CourseDescriptionCard mainImage={Mansion}/>
                 <StackBanner mainImage={stackBannerImg} title={stackBannerTitle}/>
