@@ -32,7 +32,8 @@ function CursoInfantil() {
 
 
             <Stack pt={18} px={xPadding}>
-                <GroupBanner img={character} title={groupBannerTitle} description={groupBannerDescription}/>
+                <GroupBanner img={character} title={groupBannerTitle} description={groupBannerDescription}
+                             imgWidth={120}/>
                 <Group noWrap spacing={"xs"}>
                     <Badge size={"xl"} variant={"filled"} color={"teal.7"} radius={"md"}
                            leftSection={<Center><IconBrush size={22}/></Center>}>Imaginación</Badge>
@@ -43,7 +44,12 @@ function CursoInfantil() {
                 <CourseDescriptionCard mainImage={Mansion} bkColor={"#0CA678"} btnColor={"teal.7"}/>
                 <StackBanner mainImage={stackBannerImg} title={stackBannerTitle}/>
                 <Modules/>
-                <GroupBanner img={npc} title={groupBannerTitle} description={groupBannerDescription}></GroupBanner>
+                <GroupBanner
+                    img={npc}
+                    title={groupBannerTitle}
+                    description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin et enim  incidunt laoreet. Nunc auc tor eu ante in blandit. In interdum vel elit eu sollicitudin Ut pretium blandit tincidunt. Vestibulum congue est  felis, at tristique tellus rhoncus eu. '}
+                    imgWidth={150}
+                />
             </Stack>
         </>
     )
