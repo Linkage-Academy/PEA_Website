@@ -1,19 +1,28 @@
-import {Anchor, Box, Burger, Button, Drawer, Group, Header, Image, MediaQuery, Stack} from '@mantine/core';
-import React from 'react';
-import {useHomeHeroStyles} from '../HomeHero.styles';
-import isotype from './static/logoLinkage.png'
-import {Link} from "react-router-dom";
 import {useDisclosure} from "@mantine/hooks";
+import {
+    Anchor,
+    Box,
+    Burger,
+    Button,
+    Drawer,
+    Group,
+    Header as MantineHeader,
+    Image,
+    MediaQuery,
+    Stack
+} from "@mantine/core";
+import isotype from "../../pages/Home/components/HomeHero/components/static/logoLinkage.png";
+import {Link} from "react-router-dom";
+import React from "react";
+import {useColoredHeaderStyles} from "./ColoredHeader.styles";
 
-
-function HeaderComponent(props) {
-    const {backColor} = props;
-    const {classes} = useHomeHeroStyles({backColor});
+function ColoredHeader({color}) {
+    const {classes} = useColoredHeaderStyles({color: color});
     const [opened, {toggle, close}] = useDisclosure(false);
 
 
     return (
-        <Header className={classes.header} pr={"xl"} height={"auto"}>
+        <MantineHeader className={classes.header} pr={"xl"} height={"auto"}>
 
             <Image maw={185} src={isotype} alt="Academy Linkage Logo" className={classes.headerLogo}/>
 
@@ -38,7 +47,7 @@ function HeaderComponent(props) {
                     <Button
                         className={classes.desktopNavbarCTA}
                         size={"sm"}
-                        color={"red.6"}
+                        color={`${color}.6`}
                         variant={"white"}
                     >
                         Inscribete Ahora
@@ -47,10 +56,8 @@ function HeaderComponent(props) {
                 </Group>
             </Box>
 
-        </Header>
+        </MantineHeader>
     )
-
 }
 
-
-export default HeaderComponent;
+export default ColoredHeader
