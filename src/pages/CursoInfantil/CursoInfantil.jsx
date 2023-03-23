@@ -11,8 +11,6 @@ import InformationSection from "./components/InformationSection";
 
 
 const groupBannerTitle = '¿Por qué aprender con Minecraft?';
-const groupBannerDescription = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin et enim  incidunt laoreet. Nunc auc tor eu ante in blandit. In interdum vel elit eu sollicitudin Ut pretium blandit tincidunt. Vestibulum congue est  felis, at tristique tellus rhoncus eu. Nunc placerat tellus ex.';
-const stackBannerTitle = 'Aprende Jugando';
 const themeMantineColor = ['teal', '7',];
 
 function CursoInfantil() {
@@ -21,10 +19,11 @@ function CursoInfantil() {
     const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
     const xPadding = isLargeScreen ? 128 : "xs";
 
-    return (
+    return <>
+        <HeroHeader color={"teal"} title={"!Diviertete Aprendiendo con Minecraft!"}
+                    rightSection={<Image src={Land3d}/>} barColorIndex={themeMantineColor[1]}/>
         <Box px={xPadding}>
-            <HeroHeader color={"teal"} title={"!Diviertete Aprendiendo con Minecraft!"}
-                        rightSection={<Image src={Land3d}/>} barColorIndex={themeMantineColor[1]}/>
+
             <InformationSection/>
             <Modules/>
             <GroupBanner
@@ -35,7 +34,8 @@ function CursoInfantil() {
                 bottomSection={<Box/>}
             />
         </Box>
-    )
+    </>
+
 }
 
 export default CursoInfantil;
