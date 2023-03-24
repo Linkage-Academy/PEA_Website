@@ -1,16 +1,15 @@
-import {Box, Stack, Text} from "@mantine/core";
-import HomeHero from "./components/HomeHero/HomeHero";
+import {Image, Stack} from "@mantine/core";
 import Categories from "./components/Categories/Categories";
 import BannerMinecraft from "./components/BannerMinecraft/BannerMinecraft";
 import BannerDesktopMinecraft from "./components/BannerMinecraft/BannerDesktopMinecraft";
-import HeaderComponent from "./components/HomeHero/components/HeaderComponent";
 import React from "react";
 import {useHomeHeroStyles} from "./components/HomeHero/HomeHero.styles";
 import {useTheme} from "@emotion/react";
 import {useMediaQuery} from "@mantine/hooks";
 import BannerCourses from "./components/BannerCourses/BannerCourses";
-
-
+import HeroHeader from "../../components/HeroHeader";
+import robotDesktop from './components/HomeHero/static/robot_banner.webp';
+import robot from './components/HomeHero/static/robot.webp';
 
 
 function Home() {
@@ -20,26 +19,20 @@ function Home() {
     const xPadding = isLargeScreen ? 128 : "xs"
     return (
         <>
-            <Stack spacing={0} sx={{position: "relative"}}>
-                <HeaderComponent backColor='red'/>
-                <Box className={classes.rightSidebar}/>
-
-                <Box pl={xPadding} pr={isLargeScreen ? xPadding / 2 : xPadding} my={"md"}>
-                    <HomeHero/>
-                </Box>
-            </Stack>
+            <HeroHeader color={"red"} title={"¡Aprende a Construir el Futuro!"} barColorIndex={7}
+                        rightSection={<Image src={isLargeScreen ? robotDesktop : robot}/>}/>
 
             <Stack px={xPadding}>
                 <Categories/>
                 {isLargeScreen ?
-                <BannerDesktopMinecraft/>
-                : 
-                  <BannerMinecraft/>
-                  }
+                    <BannerDesktopMinecraft/>
+                    :
+                    <BannerMinecraft/>
+                }
 
                 <BannerCourses/>
             </Stack>
-            
+
 
         </>
     )
