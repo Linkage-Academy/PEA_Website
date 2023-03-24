@@ -1,24 +1,16 @@
-import {Badge, Box, Center, Group, Stack, Image} from "@mantine/core";
+import {Badge, Box, Center, createStyles, Group, Image} from "@mantine/core";
 import React from "react";
 import {useTheme} from "@emotion/react";
 import {useMediaQuery} from "@mantine/hooks";
-import HeaderComponent from '../Home/components/HomeHero/components/HeaderComponent';
-import HomeHero from '../Home/components/HomeHero/HomeHero';
 import GroupBanner from "../CursoInfantil/components/GroupBanner/GroupBanner";
-import character from '../CursoInfantil/static/char3d.webp';
 import CourseDescriptionCard from "../CursoInfantil/components/CourseDescriptionCard/CourseDescriptionCard";
-import Mansion from '../CursoInfantil/static/Mansion.webp';
 import StackBanner from "../CursoInfantil/components/StackBanner/StackBanner";
-import stackBannerImg from '../CursoInfantil/static/avatar.webp';
-import npc from '../CursoInfantil/static/npc.webp';
 import {IconBrush, IconMath} from "@tabler/icons-react";
 import HeroHeader from "../../components/HeroHeader";
 import heroImg from './static/heroImgs.webp';
-import cssImg from './static/css.webp';
-import codeImg from './static/Codigo.webp';
-import controller from './static/controller.webp';
-
-import Modules from "../CursoInfantil/components/Modules/Modules";
+import css from "./static/css.webp";
+import controller from "./static/controller.webp";
+import Codigo from "./static/Codigo.webp";
 
 
 const groupBannerTitle = '¿Por qué aprender con Minecraft?';
@@ -27,42 +19,86 @@ const stackBannerTitle = 'Aprende Jugando';
 const themeMantineColor = ['cyan', '7', 'cyan.7'];
 
 
+export const useInformationSectionStyles = createStyles(theme => ({
+
+    grid: {
+        display: "grid",
+        gridTemplateAreas: `"why" "card" "playing"`,
+        gridGap: "1rem 10rem",
+
+        [theme.fn.largerThan("sm")]: {
+            gridTemplateAreas: `
+                "why  card" 
+                "playing  card"
+            `,
+        }
+
+    },
+    gridWhy: {
+        gridArea: "why",
+    },
+    gridCard: {
+        gridArea: "card",
+    },
+    gridPlaying: {
+        gridArea: "playing"
+    }
+}))
+
 function CursoWeb() {
-   
+
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
     const xPadding = isLargeScreen ? 128 : "xs";
+    const {classes: gridClasses} = useInformationSectionStyles()
+
+    const badges = (
+        <Group noWrap spacing={"xs"} pt={"1rem"}>
+            <Badge size={isLargeScreen ? "xl" : "lg"} variant={"filled"} color={"cyan.7"}
+                   radius={"md"}
+                   leftSection={<Center><IconBrush size={22}/></Center>}>Imaginación</Badge>
+            <Badge size={isLargeScreen ? "xl" : "lg"} variant={"filled"} color={"cyan.7"}
+                   radius={"md"}
+                   leftSection={<Center><IconMath size={22}/></Center>}>Lógica</Badge>
+        </Group>
+    )
+
     return (
         <>
-        {/*
-            <Stack spacing={0} sx={{position: "relative"}}>
-                <HeaderComponent backColor='teal'/>
-                <Box className={classes.rightSidebar}/>
-
-                <Box pl={xPadding} pr={isLargeScreen ? xPadding / 2 : xPadding} my={"md"}>
-                    <HomeHero color={"teal"} title={"!Diviertete Aprendiendo con Minecraft!"}/>
-                </Box>
-            </Stack>
-
-          */  }
             <HeroHeader color={themeMantineColor[0]} title={"!Diviertete Aprendiendo con Minecraft!"}
                         rightSection={<Image src={heroImg}/>} barColorIndex={themeMantineColor[1]}/>
+            <Box px={xPadding}>
 
-            <Stack pt={18} px={xPadding}>
-                <GroupBanner img={cssImg} title={groupBannerTitle} description={groupBannerDescription}/>
-                <Group noWrap spacing={"xs"}>
-                    <Badge size={"xl"} variant={"filled"} color={themeMantineColor[0]} radius={"md"}
-                           leftSection={<Center><IconBrush size={22}/></Center>}>Imaginación</Badge>
-                    <Badge size={"xl"} variant={"filled"} color={themeMantineColor[0]} radius={"md"}
-                           leftSection={<Center><IconMath size={22}/></Center>}>Lógica</Badge>
-                </Group>
 
-                <CourseDescriptionCard mainImage={codeImg} bkColor={'#1098AD'} btnColor={themeMantineColor[0]}/>
+                <Box className={gridClasses.grid}>
 
-                <StackBanner mainImage={controller} title={stackBannerTitle}/>
-                <Modules/>
-                <GroupBanner img={npc} title={groupBannerTitle} description={groupBannerDescription}></GroupBanner>
-            </Stack>
+                    <Box className={gridClasses.gridWhy}>
+                        <GroupBanner
+
+                            img={css}
+                            title={groupBannerTitle}
+                            description={groupBannerDescription}
+                            imgWidth={isLargeScreen ? 180 : 130}
+                            imgOutsideTitle={true}
+                            bottomSection={badges}
+                        />
+                    </Box>
+
+
+                    <Center className={gridClasses.gridCard}>
+                        <CourseDescriptionCard
+                            className={gridClasses.gridCard}
+                            mainImage={Codigo}
+                            bkColor={"#0D98AD"}
+                            btnColor={"cyan.7"}
+                        />
+                    </Center>
+
+                    <Box className={gridClasses.gridPlaying}>
+                        <StackBanner mainImage={controller} title={stackBannerTitle}/>
+                    </Box>
+                </Box>
+            </Box>
         </>
     )
 }
