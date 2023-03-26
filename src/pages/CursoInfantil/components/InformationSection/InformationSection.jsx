@@ -16,7 +16,8 @@ const groupBannerTitle = '¿Por qué aprender con Minecraft?';
 const groupBannerDescription = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin et enim  incidunt laoreet. Nunc auc tor eu ante in blandit. In interdum vel elit eu sollicitudin Ut pretium blandit tincidunt. Vestibulum congue est  felis, at tristique tellus rhoncus eu. Nunc placerat tellus ex.';
 const stackBannerTitle = 'Aprende Jugando';
 
-function InformationSection() {
+function InformationSection(props) {
+    const {groupBannerTitle, groupBannerDescription, stackBannerTitle, stackBannerDescription } = props;
     const {classes: gridClasses} = useInformationSectionStyles()
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
@@ -53,7 +54,7 @@ function InformationSection() {
             </Center>
 
             <Box className={gridClasses.gridPlaying}>
-                <StackBanner mainImage={stackBannerImg} title={stackBannerTitle}/>
+                <StackBanner mainImage={stackBannerImg} title={stackBannerTitle} description={stackBannerDescription}/>
             </Box>
         </Box>
     )

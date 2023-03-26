@@ -10,7 +10,12 @@ import InformationSection from "./components/InformationSection";
 import ModulesSection from "./components/ModulesSection";
 
 
-const groupBannerTitle = '¿Por qué aprender con Minecraft?';
+const groupBannerTitle = ['Bienvenidos al Mundo de la Programación', 
+                        'Gamificación'];
+const groupBannerDescription= ['Nuestro curso de Introducción al Mundo de la Programación tiene como objetivo despertar el pensamiento crítico en los niños desde temprana edad. Se impartirán conceptos como variables, tipo de datos, bucles, sentencias condicionales, etc. Las lecciones serán complementadas con actividades prácticas de programación dentro de Minecraft.',
+                              'La metodología de nuestro curso para niños es que los chicos aprendan mientras se divierten en su videojuego favorito, en este caso Minecraft. La gamificación presente alrededor de la curva de aprendizaje será la clave para desarrollar el pensamiento lógico del estudiante. ¡Anímate!'];
+const stackBannerTitle = ['Aprende Jugando'];
+const stackBannerDescription = ['Construye la ciudad de tus sueños mientras desarrollas tus habilidades como programador.'];
 const themeMantineColor = ['teal', '7',];
 
 function CursoInfantil() {
@@ -24,13 +29,14 @@ function CursoInfantil() {
                     rightSection={<Image src={Land3d}/>} barColorIndex={themeMantineColor[1]}/>
         <Box px={xPadding}>
 
-            <InformationSection/>
+            <InformationSection groupBannerTitle={groupBannerTitle[0]} groupBannerDescription={groupBannerDescription[0]} 
+            stackBannerTitle={stackBannerTitle[0]} stackBannerDescription={stackBannerDescription[0]}/>
             <ModulesSection/>
 
             <GroupBanner
                 img={npc}
-                title={groupBannerTitle}
-                description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin et enim  incidunt laoreet. Nunc auc tor eu ante in blandit. In interdum vel elit eu sollicitudin Ut pretium blandit tincidunt. Vestibulum congue est  felis, at tristique tellus rhoncus eu. '}
+                title={groupBannerTitle[1]}
+                description={groupBannerDescription[1]}
                 imgWidth={isLargeScreen ? 358.5 : 150}
                 bottomSection={<Box/>}
             />

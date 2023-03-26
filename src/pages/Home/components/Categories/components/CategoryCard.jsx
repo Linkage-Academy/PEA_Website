@@ -2,11 +2,13 @@ import { Button, Stack, Group, Card, Overlay, Title, BackgroundImage, Text, Box,
 import React from 'react';
 import {useMediaQuery} from "@mantine/hooks";
 import {useTheme} from "@emotion/react";
+import {Link} from "react-router-dom";
 
 //import infantil from './static/categoryInfantil.svg';
 import { useCategoriesStyles } from '../Categories.styles';
 
 export function MobileCard(props){
+    const {btnLink} = props;
     const {classes} = useCategoriesStyles();
     const {categoryName, description, backgroundImage} = props;
     return(
@@ -17,7 +19,7 @@ export function MobileCard(props){
                     <Text sx={{color:'white', fontSize:'0.75rem', textShadow:' 0px 4px 4px rgba(0, 0, 0, 0.25)'}}>{description}</Text>
                 </Stack>
                 <Box >
-                    <Button className={classes.cardButton}  color="red.6" >Leer Más</Button>
+                    <Button component={Link} to={btnLink} className={classes.cardButton}  color="red.6" >Leer Más</Button>
                 </Box>
             </Group>     
         </Card>

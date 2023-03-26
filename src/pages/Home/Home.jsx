@@ -13,8 +13,9 @@ import robot from './components/HomeHero/static/robot.webp';
 
 
 function Home() {
-    const {classes} = useHomeHeroStyles()
-    const theme = useTheme()
+    const btnLink = ['http://localhost:3000/cursoprogramacioninfantil', 'http://localhost:3000/cursoweb'];
+    const {classes} = useHomeHeroStyles();
+    const theme = useTheme();
     const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
     const xPadding = isLargeScreen ? 128 : "xs"
     return (
@@ -23,9 +24,9 @@ function Home() {
                         rightSection={<Image src={isLargeScreen ? robotDesktop : robot}/>}/>
 
             <Stack px={xPadding}>
-                <Categories/>
+                <Categories btnLink1={btnLink[0]} btnLink2={btnLink[1]}/>
                 {isLargeScreen ?
-                    <BannerDesktopMinecraft/>
+                    <BannerDesktopMinecraft />
                     :
                     <BannerMinecraft/>
                 }

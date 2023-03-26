@@ -11,8 +11,8 @@ import {useTheme} from "@emotion/react";
 import {useMediaQuery} from "@mantine/hooks";
 
 
-function Categories() {
-
+function Categories(props) {
+    const {btnLink1, btnLink2} = props;
     const {classes} = useCategoriesStyles();
     const categoryName = ['Infantil', 'Frontend', 'Backend'];
     const description = ['1 Curso, 96 horas de Enseñanza', '1 Curso, 32 Horas de Enseñanza', '2 Cursos, 64 Horas de Enseñanza'];
@@ -36,9 +36,9 @@ function Categories() {
             </> 
                 : 
                 <>
-                  <MobileCard categoryName={categoryName[0]} backgroundImage={infantil} description={description[0]}/>
-                  <MobileCard categoryName={categoryName[1]} backgroundImage={frontend} description={description[1]}/>
-                  <MobileCard categoryName={categoryName[2]} backgroundImage={backend} description={description[2]}/>
+                  <MobileCard categoryName={categoryName[0]} backgroundImage={infantil} description={description[0]} btnLink={btnLink1}/>
+                  <MobileCard categoryName={categoryName[1]} backgroundImage={frontend} description={description[1]} btnLink={btnLink2}/>
+                  <MobileCard categoryName={categoryName[2]} backgroundImage={backend} description={description[2]} btnLink={btnLink2}/>
                 </>
                   }
         </>
