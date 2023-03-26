@@ -13,7 +13,7 @@ import robot from './components/HomeHero/static/robot.webp';
 
 
 function Home() {
-    const btnLink = ['http://localhost:3000/cursoprogramacioninfantil', 'http://localhost:3000/cursoweb'];
+    const btnLink = ['https://cta.linkageacademy.com/cursoprogramacioninfantil', 'https://cta.linkageacademy.com/cursoweb'];
     const {classes} = useHomeHeroStyles();
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
@@ -33,8 +33,6 @@ function Home() {
 
                 <BannerCourses/>
             </Stack>
-
-
         </>
     )
 }
