@@ -1,4 +1,5 @@
-import {Button, Card, Group, Image, Stack, Text, Title} from '@mantine/core';
+import {Button, Card, Group, Image, Stack, Text, Title, TextInput, Select, Modal} from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
 import React from 'react';
 import {
     IconChartArrowsVertical,
@@ -14,9 +15,29 @@ import {useCourseDescriptionCardStyles} from "./CourseDescriptionCard.styles";
 function CourseDescriptionCard({mainImage, bkColor, btnColor}) {
     const description = ['Principiante', '4 Horas', '8-14 años', 'Si', 'Si', '96 Lecciones']
     const title = ['Nivel', 'Horas Semanales', 'Edad', 'Certificado', 'Insignia Digital', 'Lecciones']
-    const {classes} = useCourseDescriptionCardStyles()
+    const {classes} = useCourseDescriptionCardStyles();
+    const [opened, {open, close}] =useDisclosure();
+
     return (
         <Card shadow="sm" padding="lg" radius="md" withBorder>
+
+            <Modal opened={opened} onClose={close} title="Authentication">
+                <form>
+                        <TextInput label="Nombre" placeholder="John"/>
+                        <TextInput label="Apellido" placeholder="Doe"/>
+                        <TextInput label="Correo" placeholder="your@email.com"/>
+                        <TextInput label="Número Telefónico" placeholder="+505 8888 8888"/>
+                        <Select label="Selecciona el curso deseado" placeholder='¡Enrolate!'
+                        data={[
+                            {value:'CI', label:'Curso Infantil'},
+                            {value:'CW', label:'Curso Web'},
+                        ]} />
+                                
+                                
+                        
+                    </form>
+                </Modal>
+
             <Card.Section component="a">
                 <Image
                     src={mainImage}
@@ -71,7 +92,7 @@ function CourseDescriptionCard({mainImage, bkColor, btnColor}) {
                     </Stack>
 
                 </Group>
-                <Button color={btnColor} fullWidth size={"md"}>Inscribite</Button>
+                <Button color={btnColor} fullWidth size={"md"} onClick={open}>Inscribite</Button>
 
             </Stack>
         </Card>

@@ -31,6 +31,7 @@ function CursoInfantil() {
 
             <InformationSection groupBannerTitle={groupBannerTitle[0]} groupBannerDescription={groupBannerDescription[0]} 
             stackBannerTitle={stackBannerTitle[0]} stackBannerDescription={stackBannerDescription[0]}/>
+            
             <ModulesSection/>
 
             <GroupBanner
