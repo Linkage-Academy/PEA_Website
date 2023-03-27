@@ -1,9 +1,10 @@
-import {Button, Card, Group, Image, Stack, Text, Box} from '@mantine/core';
+import {Button, Card, Group, Image, Stack, Text, TextInput, Select, Modal} from '@mantine/core';
 import minecraft3dImage from './static/minecraftLand3d.webp';
 import brushIcon from './static/brush.svg';
 import bulbIcon from './static/bulb.svg';
 import mathIcon from './static/math.svg';
 import React from 'react';
+import { useDisclosure } from '@mantine/hooks';
 import {useBannerMinecraftStyles} from './BannerMinecraft.styles';
 
 function BannerCardMinecraft(props){
@@ -31,10 +32,26 @@ function BannerCardMinecraft(props){
 
 
 function BannerDesktopMinecraft() {
-
+    const[opened, {open, close}] = useDisclosure();
     const {classes} = useBannerMinecraftStyles();
     return (
         <Group m={'md'} p={0} noWrap>
+            <Modal opened={opened} onClose={close} title="Authentication">
+                <form>
+                    <TextInput label="Nombre" placeholder="John"/>
+                    <TextInput label="Apellido" placeholder="Doe"/>
+                    <TextInput label="Correo" placeholder="your@email.com"/>
+                    <TextInput label="Número Telefónico" placeholder="+505 8888 8888"/>
+                    <Select label="Selecciona el curso deseado" placeholder='¡Enrolate!'
+                    data={[
+                        {value:'CI', label:'Curso Infantil'},
+                        {value:'CW', label:'Curso Web'},
+                    ]} />
+                        
+                        
+                
+                </form>
+            </Modal>
             <Image maw={'40%'} radius="md" src={minecraft3dImage} alt="Random image"/>
             <Stack h={'100%'} >
                 <Group noWrap>
@@ -52,7 +69,7 @@ function BannerDesktopMinecraft() {
                                 <Text className={classes.textStyle} mt={'xs'} color="white" align='center'>
                                     Cultiva las Habilidades Stem con Minecraft
                                 </Text>
-                                <Button className={classes.bannerButton} color='red.6'>¡Inscribite Ahora!</Button>
+                                <Button className={classes.bannerButton} color='red.6' onClick={open}>¡Inscribite Ahora!</Button>
                             </Stack>
                         </Card>
 

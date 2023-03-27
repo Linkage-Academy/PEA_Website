@@ -1,11 +1,12 @@
 import {Button, Card, Group, Image, Stack, Text, Badge, Box} from '@mantine/core';
 import React from 'react';
 import { useBannerCoursestStyles } from '../BannerCourses.styles';
+import {Link} from "react-router-dom";
 
 
 function CourseCard(props) {
 
-    const {mainImage, title, description} = props;
+    const {mainImage, title, description, btnLink} = props;
     const {classes} = useBannerCoursestStyles();
     return (
         <Card shadow="sm" padding="lg" radius="md" withBorder>
@@ -28,7 +29,7 @@ function CourseCard(props) {
             {description}
         </Text>
         <Box  className={classes.buttonContainer}>
-            <Button  color='red.6' fullWidth mt="md" radius="md">
+            <Button component={Link} to={btnLink} color='red.6' fullWidth mt="md" radius="md">
                 Explorar
             </Button>
         </Box>

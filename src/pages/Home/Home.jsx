@@ -1,4 +1,4 @@
-import {Image, Stack} from "@mantine/core";
+import {Image, Stack, Modal} from "@mantine/core";
 import Categories from "./components/Categories/Categories";
 import BannerMinecraft from "./components/BannerMinecraft/BannerMinecraft";
 import BannerDesktopMinecraft from "./components/BannerMinecraft/BannerDesktopMinecraft";
@@ -10,6 +10,7 @@ import BannerCourses from "./components/BannerCourses/BannerCourses";
 import HeroHeader from "../../components/HeroHeader";
 import robotDesktop from './components/HomeHero/static/robot_banner.webp';
 import robot from './components/HomeHero/static/robot.webp';
+
 
 
 function Home() {
