@@ -30,9 +30,9 @@ function Categories(props) {
             <>
             {isLargeScreen ?
             <>
-                <DesktopCard categoryName={categoryName[0]} backgroundImage={infantil} description={description[0]}/>
-                <DesktopCard categoryName={categoryName[1]} backgroundImage={frontend} description={description[1]}/>
-                <DesktopCard categoryName={categoryName[2]} backgroundImage={backend} description={description[2]}/>
+                <DesktopCard categoryName={categoryName[0]} backgroundImage={infantil} description={description[0]} btnLink={btnLink1}/>
+                <DesktopCard categoryName={categoryName[1]} backgroundImage={frontend} description={description[1]} btnLink={btnLink2}/>
+                <DesktopCard categoryName={categoryName[2]} backgroundImage={backend} description={description[2]} btnLink={btnLink2}/>
             </> 
                 : 
                 <>
