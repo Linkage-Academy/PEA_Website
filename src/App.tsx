@@ -1,23 +1,23 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {MantineProvider, Title} from "@mantine/core";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { MantineProvider } from "@mantine/core";
+import routes from "./routes";
 
 function App() {
-  const routes = createBrowserRouter([
-    {
-      path: "/",
-      element: <Title>Home</Title>,
-    },
-  ]);
-  return <RouterProvider router={routes}/>;
+  const appRoutes = createBrowserRouter(routes);
+  return <RouterProvider router={appRoutes} />;
 }
 
 function WrappedApp() {
   return (
-    <MantineProvider withNormalizeCSS withGlobalStyles theme={{
-      fontFamily: "Open Sans, sans-serif",
-      headings: {fontFamily: 'Merriweather, sans-serif'},
-    }}>
-      <App/>
+    <MantineProvider
+      withNormalizeCSS
+      withGlobalStyles
+      theme={{
+        fontFamily: "Open Sans, sans-serif",
+        headings: { fontFamily: "Merriweather, sans-serif" },
+      }}
+    >
+      <App />
     </MantineProvider>
   );
 }
