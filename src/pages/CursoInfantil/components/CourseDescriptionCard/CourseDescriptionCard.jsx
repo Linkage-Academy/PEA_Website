@@ -20,9 +20,11 @@ function CourseDescriptionCard({mainImage, bkColor, btnColor}) {
     const [opened, {open, close}] =useDisclosure();
 
     return (
+        <>
+        <ModalComponent opened={opened} open={open} close={close}/>
         <Card shadow="sm" padding="lg" radius="md" withBorder>
 
-            <ModalComponent opened={opened} open={open} close={close}/>
+            
 
             <Card.Section component="a">
                 <Image
@@ -82,6 +84,7 @@ function CourseDescriptionCard({mainImage, bkColor, btnColor}) {
 
             </Stack>
         </Card>
+        </>
     )
 }
 
