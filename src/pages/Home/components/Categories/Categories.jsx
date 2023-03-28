@@ -1,10 +1,9 @@
 import React from 'react';
-import CategoryCard from './components/CategoryCard';
 import { MobileCard } from './components/CategoryCard';
 import { DesktopCard } from './components/CategoryCard';
-import infantil from './static/Infantil.webp';
-import frontend from './static/Frontend.webp';
-import backend from './static/Backend.webp';
+import infantil from './static/infantilCategory.svg';
+import frontend from './static/frontendCategory.svg';
+import backend from './static/backendCategory.svg';
 import { Stack, Title } from '@mantine/core';
 import { useCategoriesStyles } from './Categories.styles';
 import {useTheme} from "@emotion/react";

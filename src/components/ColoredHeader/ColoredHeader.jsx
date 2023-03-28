@@ -9,20 +9,28 @@ import {
     Header as MantineHeader,
     Image,
     MediaQuery,
-    Stack
+    Stack,
+    Modal,
+    TextInput,
+    Select
 } from "@mantine/core";
 import isotype from "../../pages/Home/components/HomeHero/components/static/logoLinkage.png";
 import {Link} from "react-router-dom";
 import React from "react";
 import {useColoredHeaderStyles} from "./ColoredHeader.styles";
+import ModalComponent from "../ModalComponent";
 
 function ColoredHeader({color}) {
     const {classes} = useColoredHeaderStyles({color: color});
     const [opened, {toggle, close}] = useDisclosure(false);
+    const [isOpened, {open:openIt, close:closeIt}] = useDisclosure(false);
+    console.log(isOpened);
 
 
     return (
         <MantineHeader className={classes.header} pr={"xl"} height={"auto"}>
+        
+        <ModalComponent opened={isOpened} open={openIt} close={closeIt}/>
 
             <Image maw={185} src={isotype} alt="Academy Linkage Logo" className={classes.headerLogo}/>
 
@@ -55,6 +63,7 @@ function ColoredHeader({color}) {
                         size={"sm"}
                         color={`${color}.6`}
                         variant={"white"}
+                        onClick={()=>openIt()}
                     >
                         Inscribete Ahora
                     </Button>

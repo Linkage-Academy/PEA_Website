@@ -6,6 +6,7 @@ import mathIcon from './static/math.svg';
 import React from 'react';
 import { useDisclosure } from '@mantine/hooks';
 import {useBannerMinecraftStyles} from './BannerMinecraft.styles';
+import ModalComponent from '../../../../components/ModalComponent';
 
 function BannerCardMinecraft(props){
     const {classes} = useBannerMinecraftStyles();
@@ -36,22 +37,7 @@ function BannerDesktopMinecraft() {
     const {classes} = useBannerMinecraftStyles();
     return (
         <Group m={'md'} p={0} noWrap>
-            <Modal opened={opened} onClose={close} title="Authentication">
-                <form>
-                    <TextInput label="Nombre" placeholder="John"/>
-                    <TextInput label="Apellido" placeholder="Doe"/>
-                    <TextInput label="Correo" placeholder="your@email.com"/>
-                    <TextInput label="Número Telefónico" placeholder="+505 8888 8888"/>
-                    <Select label="Selecciona el curso deseado" placeholder='¡Enrolate!'
-                    data={[
-                        {value:'CI', label:'Curso Infantil'},
-                        {value:'CW', label:'Curso Web'},
-                    ]} />
-                        
-                        
-                
-                </form>
-            </Modal>
+            <ModalComponent opened={opened} open={open} close={close}/>
             <Image maw={'40%'} radius="md" src={minecraft3dImage} alt="Random image"/>
             <Stack h={'100%'} >
                 <Group noWrap>

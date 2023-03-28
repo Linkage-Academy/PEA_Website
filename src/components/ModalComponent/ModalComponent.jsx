@@ -1,12 +1,14 @@
 import { useDisclosure } from '@mantine/hooks';
 import { Modal, Button, Group, TextInput, Select } from '@mantine/core';
+import { useModalComponentStyles } from './ModalComponent.styles';
 
 function ModalComponent(props) {
   const {opened, open, close } = props;
+  const {classes} = useModalComponentStyles();
 
   return (
     
-      <Modal opened={opened} onClose={close} title="Authentication">
+      <Modal className={classes.modalStyle} opened={opened} onClose={close} title="Inscripción">
       <form>
             <TextInput label="Nombre" placeholder="John"/>
             <TextInput label="Apellido" placeholder="Doe"/>
@@ -17,9 +19,6 @@ function ModalComponent(props) {
                 {value:'CI', label:'Curso Infantil'},
                 {value:'CW', label:'Curso Web'},
             ]} />
-                    
-                    
-            
         </form>
       </Modal>
 

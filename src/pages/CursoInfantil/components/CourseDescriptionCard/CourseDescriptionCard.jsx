@@ -10,6 +10,7 @@ import {
     IconUsers
 } from '@tabler/icons-react';
 import {useCourseDescriptionCardStyles} from "./CourseDescriptionCard.styles";
+import ModalComponent from '../../../../components/ModalComponent';
 
 
 function CourseDescriptionCard({mainImage, bkColor, btnColor}) {
@@ -21,22 +22,7 @@ function CourseDescriptionCard({mainImage, bkColor, btnColor}) {
     return (
         <Card shadow="sm" padding="lg" radius="md" withBorder>
 
-            <Modal opened={opened} onClose={close} title="Authentication">
-                <form>
-                        <TextInput label="Nombre" placeholder="John"/>
-                        <TextInput label="Apellido" placeholder="Doe"/>
-                        <TextInput label="Correo" placeholder="your@email.com"/>
-                        <TextInput label="Número Telefónico" placeholder="+505 8888 8888"/>
-                        <Select label="Selecciona el curso deseado" placeholder='¡Enrolate!'
-                        data={[
-                            {value:'CI', label:'Curso Infantil'},
-                            {value:'CW', label:'Curso Web'},
-                        ]} />
-                                
-                                
-                        
-                    </form>
-                </Modal>
+            <ModalComponent opened={opened} open={open} close={close}/>
 
             <Card.Section component="a">
                 <Image

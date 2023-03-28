@@ -1,6 +1,5 @@
 import {createStyles} from '@mantine/core';
-import Infantil from './static/Infantil.webp'
-import infantil from './static/Infantil.webp';
+
 
 export const useCategoriesStyles = createStyles((theme) => ({
 

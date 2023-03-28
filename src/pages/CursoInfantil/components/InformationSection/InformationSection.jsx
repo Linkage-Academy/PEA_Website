@@ -35,7 +35,7 @@ function InformationSection(props) {
 
     return (
         <Box className={gridClasses.grid}>
-
+        
             <Box className={gridClasses.gridWhy}>
                 <GroupBanner
 

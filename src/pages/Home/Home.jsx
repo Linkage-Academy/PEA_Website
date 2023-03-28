@@ -10,11 +10,12 @@ import BannerCourses from "./components/BannerCourses/BannerCourses";
 import HeroHeader from "../../components/HeroHeader";
 import robotDesktop from './components/HomeHero/static/robot_banner.webp';
 import robot from './components/HomeHero/static/robot.webp';
+import ModulesSectionHome from "./components/ModulesSectionHome";
 
 
 
 function Home() {
-    const btnLink = ['https://cta.linkageacademy.com/cursoprogramacioninfantil', 'https://cta.linkageacademy.com/cursoweb'];
+    const btnLink = ['/cursoprogramacioninfantil', '/cursoweb'];
     const {classes} = useHomeHeroStyles();
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
@@ -25,7 +26,9 @@ function Home() {
                         rightSection={<Image src={isLargeScreen ? robotDesktop : robot}/>}/>
 
             <Stack px={xPadding}>
-                <Categories btnLink1={btnLink[0]} btnLink2={btnLink[1]}/>
+
+                {/*<Categories btnLink1={btnLink[0]} btnLink2={btnLink[1]}/>*/}
+                <ModulesSectionHome/>
                 {isLargeScreen ?
                     <BannerDesktopMinecraft />
                     :

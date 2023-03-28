@@ -3,8 +3,6 @@ import React from 'react';
 import { useBannerCoursestStyles } from './BannerCourses.styles';
 import CourseCard from './components/CourseCard';
 import minecratImage from './static/mineCourse.webp';
-import setup from './static/setup.webp';
-import setupPurple from './static/setupPurple.webp';
 import setupDark from './static/setupDark.webp';
 
 

@@ -6,88 +6,24 @@ import arduino from "../Modules/static/arduino.webp";
 import React from "react";
 import {useModuleSectionStyles} from "./ModulesSection.styles";
 import { useDisclosure } from '@mantine/hooks';
+import ModalComponent from '../../../../components/ModalComponent';
+import CardComponent from "./components/CardComponent";
 
 function ModulesSection() {
-    const [opened, {open, close}] =useDisclosure();
+    const [opened, {open, close}] =useDisclosure(false);
     const {classes} = useModuleSectionStyles();
 
     return(
         <>
-            <Modal opened={opened} onClose={close} title="Authentication">
-                <form>
-                        <TextInput label="Nombre" placeholder="John"/>
-                        <TextInput label="Apellido" placeholder="Doe"/>
-                        <TextInput label="Correo" placeholder="your@email.com"/>
-                        <TextInput label="Número Telefónico" placeholder="+505 8888 8888"/>
-                        <Select label="Selecciona el curso deseado" placeholder='¡Enrolate!'
-                        data={[
-                            {value:'CI', label:'Curso Infantil'},
-                            {value:'CW', label:'Curso Web'},
-                        ]} />              
-                        
-                </form>
-            </Modal>
+
+            <ModalComponent opened={opened} open={open} close={close}/>
 
             <Title className={classes.titleSection} pt={"2rem"}>Módulos</Title>
             <SimpleGrid cols={1} pt={"1rem"} spacing={"1rem"} breakpoints={[{minWidth: "sm", cols: 2}]}>
-                <Card withBorder className={classes.card} radius={"lg"} sx={{
-                    backgroundImage: `url(${infantil})`,
-                    backgroundSize: "cover"
-                }}>
-                    <Stack>
-                        <Box>
-                            <Title order={3} className={classes.titleCardSection} color={"white"}>Programacion en
-                                Bloques</Title>
-                            <Text color={"white"}>1 Curso, 90 Horas de enseñanza</Text>
-                        </Box>
-                        <Button color={"teal.8"} size={"sm"} fullWidth={false} onClick={open}>Inscribete al Módulo</Button>
-                    </Stack>
-                </Card>
-
-                <Card withBorder radius={"lg"} className={classes.card} sx={{
-                    backgroundImage: `url(${trans})`,
-                    backgroundSize: "cover"
-
-                }}>
-                    <Stack>
-                        <Box>
-                            <Title order={3} color={"white"} className={classes.titleCardSection}>Programacion en
-                                Bloques</Title>
-                            <Text color={"white"}>1 Curso, 90 Horas de enseñanza</Text>
-                        </Box>
-                        <Button color={"teal.8"} size={"sm"} onClick={open}>Inscribete al Módulo</Button>
-                    </Stack>
-                </Card>
-
-                <Card withBorder radius={"lg"} className={classes.card} sx={{
-                    backgroundImage: `url(${python})`,
-                    backgroundSize: "cover"
-
-                }}>
-                    <Stack>
-                        <Box>
-                            <Title order={3} color={"white"} className={classes.titleCardSection}>Programacion en
-                                Bloques</Title>
-                            <Text color={"white"}>1 Curso, 90 Horas de enseñanza</Text>
-                        </Box>
-                        <Button color={"teal.8"} size={"sm"} onClick={open}>Inscribete al Módulo</Button>
-                    </Stack>
-                </Card>
-
-                <Card withBorder radius={"lg"} className={classes.card} sx={{
-                    backgroundImage: `url(${arduino})`,
-                    backgroundSize: "cover"
-
-                }}>
-                    <Stack>
-                        <Box>
-                            <Title order={3} color={"white"} className={classes.titleCardSection}>Programacion en
-                                Bloques</Title>
-                            <Text color={"white"}>1 Curso, 90 Horas de enseñanza</Text>
-                        </Box>
-                        <Button color={"teal.8"} size={"sm"} onClick={open}>Inscribete al Módulo</Button>
-                    </Stack>
-                </Card>
+                <CardComponent img={infantil} title='Programación Mediante Bloques' description='Módulo 1, 28 Horas de enseñanza' open={open}/>
+                <CardComponent img={trans} title='Transición a Código' description='Módulo 2, 16 Horas de enseñanza' open={open}/>
+                <CardComponent img={python} title='Transición a Código' description='Módulo 3, 32 Horas de enseñanza' open={open}/>
+                <CardComponent img={arduino} title='Introducción a Arduino' description='Módulo 4, 16 Horas de enseñanza' open={open}/>
             </SimpleGrid>
         </>
     )
