@@ -4,7 +4,7 @@ import { useModuleSectionStyles } from "../ModulesSection.styles";
 
 function CardComponent(props) {
     const {classes} = useModuleSectionStyles();
-    const {img, title, description, open} = props;
+    const {img, title, description, open, btnColor} = props;
     return (
         <Card withBorder className={classes.card} radius={"lg"} sx={{
             backgroundImage: `url(${img})`,
@@ -15,7 +15,7 @@ function CardComponent(props) {
                     <Title order={3} className={classes.titleCardSection} color={"white"}>{title}</Title>
                     <Text color={"white"}>{description}</Text>
                 </Box>
-                <Button color={"teal.8"} size={"sm"} fullWidth={false} onClick={open}>Inscribete al Módulo</Button>
+                <Button color={btnColor} size={"sm"} fullWidth={false} onClick={open}>Inscribete al Módulo</Button>
             </Stack>
         </Card>
     )

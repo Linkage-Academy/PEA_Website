@@ -12,6 +12,7 @@ import CardComponent from "./components/CardComponent";
 function ModulesSection() {
     const [opened, {open, close}] =useDisclosure(false);
     const {classes} = useModuleSectionStyles();
+    const btnColor = 'teal.8';
 
     return(
         <>
@@ -20,10 +21,10 @@ function ModulesSection() {
 
             <Title className={classes.titleSection} pt={"2rem"}>Módulos</Title>
             <SimpleGrid cols={1} pt={"1rem"} spacing={"1rem"} breakpoints={[{minWidth: "sm", cols: 2}]}>
-                <CardComponent img={infantil} title='Programación Mediante Bloques' description='Módulo 1, 28 Horas de enseñanza' open={open}/>
-                <CardComponent img={trans} title='Transición a Código' description='Módulo 2, 16 Horas de enseñanza' open={open}/>
-                <CardComponent img={python} title='Transición a Código' description='Módulo 3, 32 Horas de enseñanza' open={open}/>
-                <CardComponent img={arduino} title='Introducción a Arduino' description='Módulo 4, 16 Horas de enseñanza' open={open}/>
+                <CardComponent img={infantil} title='Programación Mediante Bloques' description='Módulo 1, 28 Horas de enseñanza' open={open} btnColor={btnColor}/>
+                <CardComponent img={trans} title='Transición a Código' description='Módulo 2, 16 Horas de enseñanza' open={open} btnColor={btnColor}/>
+                <CardComponent img={python} title='Transición a Código' description='Módulo 3, 32 Horas de enseñanza' open={open} btnColor={btnColor}/>
+                <CardComponent img={arduino} title='Introducción a Arduino' description='Módulo 4, 16 Horas de enseñanza' open={open} btnColor={btnColor}/>
             </SimpleGrid>
         </>
     )
