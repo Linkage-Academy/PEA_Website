@@ -13,9 +13,8 @@ import {useCourseDescriptionCardStyles} from "./CourseDescriptionCard.styles";
 import ModalComponent from '../../../../components/ModalComponent';
 
 
-function CourseDescriptionCard({mainImage, bkColor, btnColor}) {
-    const description = ['Principiante', '4 Horas', '8-14 años', 'Si', 'Si', '96 Lecciones']
-    const title = ['Nivel', 'Horas Semanales', 'Edad', 'Certificado', 'Insignia Digital', 'Lecciones']
+function CourseDescriptionCard({mainImage, bkColor, btnColor, description, title, cardTitle}) {
+
     const {classes} = useCourseDescriptionCardStyles();
     const [opened, {open, close}] =useDisclosure();
 
@@ -34,8 +33,7 @@ function CourseDescriptionCard({mainImage, bkColor, btnColor}) {
                 />
             </Card.Section>
             <Stack sx={{textAlign: "center"}} align={"center"}>
-                <Title order={4} fw={500} pt={"1rem"}>Introduccion a la Programación para Minecraft for
-                    Education</Title>
+                <Title order={4} fw={500} pt={"1rem"}>{cardTitle}</Title>
 
                 <Group noWrap w={"100%"} className={classes.labelsCard}>
                     <Stack sx={{flexGrow: 1}} spacing={"1.2rem"}>

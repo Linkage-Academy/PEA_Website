@@ -18,7 +18,8 @@ const groupBannerDescription = 'Aprender programación web puede abrir un mundo 
 const stackBannerTitle = 'Aprende Jugando';
 const themeMantineColor = ['cyan', '7', 'cyan.7'];
 
-
+const description = ['Principiante', '4 Horas', '14+ años', 'Si', 'Si', '96 Lecciones']
+const cardElemtitle = ['Nivel', 'Horas Semanales', 'Edad', 'Certificado', 'Insignia Digital', 'Lecciones']
 export const useInformationSectionStyles = createStyles(theme => ({
 
     grid: {
@@ -91,6 +92,9 @@ function CursoWeb() {
                             mainImage={Codigo}
                             bkColor={"#0D98AD"}
                             btnColor={"cyan.7"}
+                            description={description}
+                            title={cardElemtitle}
+                            cardTitle={"Bootcamp de desarrollo Web"}
                         />
                     </Center>
 
