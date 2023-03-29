@@ -16,11 +16,11 @@ function HeroHeader({ color, title, rightSection }: IHeroHeaderProps) {
   const xPadding = isLargeScreen ? 128 : "xs";
 
   return (
-    <Stack spacing={0} sx={{ position: "relative" }}>
+    <Stack spacing={0} sx={{ position: "relative" }} bg="gray.1">
       <ColoredHeader color={color} />
       <Box className={classes.rightSidebar} />
 
-      <Box pl={xPadding} pr={xPadding} my="md">
+      <Box px={xPadding} my="md">
         <Hero color={color} title={title} rightSection={rightSection} />
       </Box>
     </Stack>

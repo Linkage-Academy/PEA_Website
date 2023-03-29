@@ -24,7 +24,7 @@ function Hero({ title, color, rightSection }: IHeroProps) {
   const buttonSize = isLargeScreen ? "lg" : "sm";
 
   return (
-    <Group noWrap px={isLargeScreen ? "xl" : 0} grow spacing={128}>
+    <Group noWrap grow spacing={128} mb="1rem">
       <Stack className={classes.mainHero}>
         <Title className={classes.mainTitle}>{title}</Title>
         <Box>
