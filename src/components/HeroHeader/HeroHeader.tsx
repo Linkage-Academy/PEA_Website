@@ -13,7 +13,7 @@ function HeroHeader({ color, title, rightSection }: IHeroHeaderProps) {
 
   const theme = useMantineTheme();
   const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
-  const xPadding = isLargeScreen ? 128 : 128 / 2;
+  const xPadding = isLargeScreen ? 128 : "xs";
 
   return (
     <Stack spacing={0} sx={{ position: "relative" }}>

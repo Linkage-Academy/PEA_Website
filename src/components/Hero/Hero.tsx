@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   DefaultMantineColor,
   Group,
@@ -23,20 +24,22 @@ function Hero({ title, color, rightSection }: IHeroProps) {
   const buttonSize = isLargeScreen ? "lg" : "sm";
 
   return (
-    <Group noWrap>
+    <Group noWrap px={isLargeScreen ? "xl" : 0} grow spacing={128}>
       <Stack className={classes.mainHero}>
         <Title className={classes.mainTitle}>{title}</Title>
-        <Button
-          color={`${color}.8`}
-          size={buttonSize}
-          fullWidth={!isLargeScreen}
-          radius="md"
-        >
-          ¡Registrate Ahora!
-        </Button>
+        <Box>
+          <Button
+            color={`${color}.8`}
+            size={buttonSize}
+            fullWidth={!isLargeScreen}
+            radius="md"
+          >
+            ¡Registrate Ahora!
+          </Button>
+        </Box>
       </Stack>
 
-      <Group p="xl" spacing={0} noWrap>
+      <Group spacing={0} noWrap p={0}>
         {rightSection}
       </Group>
     </Group>

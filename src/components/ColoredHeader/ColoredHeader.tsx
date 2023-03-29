@@ -30,6 +30,14 @@ const routes = [
     navName: "Home",
     path: "/",
   },
+  {
+    navName: "Minecraft",
+    path: "/minecraft",
+  },
+  {
+    navName: "Bootcamp Web",
+    path: "/web",
+  },
 ];
 
 function ColoredHeader({ color }: IColoredHeaderProps) {
