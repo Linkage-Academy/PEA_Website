@@ -49,4 +49,12 @@ export const useColoredHeaderStyles = createStyles((theme, {color}) => ({
         filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.26))",
         borderRadius: theme.radius.sm
     },
+
+    headerLink: {
+        color: "dark.8",
+
+        [theme.fn.largerThan("sm")]: {
+            color: "white"
+        }
+    }
 }))
