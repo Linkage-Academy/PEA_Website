@@ -18,7 +18,7 @@ function BannerCourses(props) {
     return (        
         <Stack my={'md'} className={classes.desktopLayout}>
             <CourseCard mainImage={minecratImage} title={titles[0]} description={description[0]} btnLink={btnLinks[0]}/>
-            <CourseCard mainImage={setupDark} title={titles[1]} description={description[0]} btnLink={btnLinks[1]}/>
+            <CourseCard mainImage={setupDark} title={titles[1]} description={description[1]} btnLink={btnLinks[1]}/>
         </Stack>
     )
 }
