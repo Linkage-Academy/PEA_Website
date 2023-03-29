@@ -8,7 +8,7 @@ import {useTheme} from "@emotion/react";
 import {useMediaQuery} from "@mantine/hooks";
 import BannerCourses from "./components/BannerCourses/BannerCourses";
 import HeroHeader from "../../components/HeroHeader";
-import robotDesktop from './components/HomeHero/static/robot_banner.webp';
+import robotDesktop from './components/HomeHero/static/robotDesktop.svg';
 import robot from './components/HomeHero/static/robot.webp';
 import ModulesSectionHome from "./components/ModulesSectionHome";
 
