@@ -13,6 +13,8 @@ import useCoursePageTemplateStyles from "./CoursePageTemplate.styles";
 import GroupInfobox, {
   IGroupInfobox,
 } from "../../components/GroupInfobox/GroupInfobox";
+import CourseDescriptionCard from "../../components/CourseDescriptionCard";
+import { ICourseDescriptionCardProps } from "../../components/CourseDescriptionCard/CourseDescriptionCard";
 
 export interface ICoursePageTemplateProps {
   accentColor: DefaultMantineColor;
@@ -21,12 +23,14 @@ export interface ICoursePageTemplateProps {
     rightSection: React.ReactNode;
   };
   infoFirst: IGroupInfobox;
+  courseCard: ICourseDescriptionCardProps;
 }
 
 function CoursePageTemplate({
   accentColor,
   hero,
   infoFirst,
+  courseCard,
 }: ICoursePageTemplateProps) {
   const { classes } = useCoursePageTemplateStyles();
   const theme = useMantineTheme();
@@ -46,7 +50,7 @@ function CoursePageTemplate({
         </Box>
 
         <Center className={classes.gridCard}>
-          <Skeleton height="100%" width="100%" />
+          <CourseDescriptionCard {...courseCard} />
         </Center>
 
         <Box className={classes.gridPlaying}>
