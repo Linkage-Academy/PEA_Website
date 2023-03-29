@@ -9,8 +9,10 @@ import {
 import React from "react";
 import { useMediaQuery } from "@mantine/hooks";
 import HeroHeader from "../../components/HeroHeader";
-import useCoursePageTemplate from "./CoursePageTemplate.styles";
 import useCoursePageTemplateStyles from "./CoursePageTemplate.styles";
+import GroupInfobox, {
+  IGroupInfobox,
+} from "../../components/GroupInfobox/GroupInfobox";
 
 export interface ICoursePageTemplateProps {
   accentColor: DefaultMantineColor;
@@ -18,8 +20,14 @@ export interface ICoursePageTemplateProps {
     title: string;
     rightSection: React.ReactNode;
   };
+  infoFirst: IGroupInfobox;
 }
-function CoursePageTemplate({ accentColor, hero }: ICoursePageTemplateProps) {
+
+function CoursePageTemplate({
+  accentColor,
+  hero,
+  infoFirst,
+}: ICoursePageTemplateProps) {
   const { classes } = useCoursePageTemplateStyles();
   const theme = useMantineTheme();
   const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
@@ -34,7 +42,7 @@ function CoursePageTemplate({ accentColor, hero }: ICoursePageTemplateProps) {
       />
       <Box px={xPadding} className={classes.grid}>
         <Box className={classes.gridWhy}>
-          <Skeleton height={200} width="100%" />
+          <GroupInfobox {...infoFirst} />
         </Box>
 
         <Center className={classes.gridCard}>

@@ -11,7 +11,6 @@ const useHeroHeaderStyles = createStyles(
       width: "25%",
       backgroundColor: theme.colors[color][6],
       position: "absolute",
-      zIndex: -1,
       alignSelf: "flex-end",
 
       [theme.fn.largerThan("sm")]: {
