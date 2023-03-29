@@ -16,16 +16,22 @@ import {
 } from "@mantine/core";
 import { Link, useLocation } from "react-router-dom";
 import React from "react";
-import isotype from "../../pages/Home/components/HomeHero/components/static/logoLinkage.png";
 import useColoredHeaderStyles from "./ColoredHeader.styles";
-import { CustomRoute } from "../../routes";
 
 export interface IColoredHeaderProps {
   color: DefaultMantineColor;
-  routes: CustomRoute[];
 }
 
-function ColoredHeader({ color, routes }: IColoredHeaderProps) {
+// i created this because of desperation
+// No time to fixed the circular dependency
+const routes = [
+  {
+    navName: "Home",
+    path: "/",
+  },
+];
+
+function ColoredHeader({ color }: IColoredHeaderProps) {
   const { classes } = useColoredHeaderStyles({ color });
   const [opened, { toggle, close }] = useDisclosure(false);
 
@@ -54,7 +60,7 @@ function ColoredHeader({ color, routes }: IColoredHeaderProps) {
     <MantineHeader className={classes.header} pr="xl" height="auto">
       <Image
         maw={185}
-        src={isotype}
+        src=""
         alt="Academy Linkage Logo"
         className={classes.headerLogo}
       />

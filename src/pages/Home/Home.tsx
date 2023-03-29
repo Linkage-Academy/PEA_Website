@@ -1,13 +1,14 @@
-import { useMantineTheme } from "@mantine/core";
+import {useMantineTheme} from "@mantine/core";
 import React from "react";
-import { useMediaQuery } from "@mantine/hooks";
-import { CustomRoute } from "../../routes";
+import {useMediaQuery} from "@mantine/hooks";
+import HeroHeader from "../../components/HeroHeader";
 
-function Home({ routes }: { routes: CustomRoute[] }) {
-  alert(routes);
+function Home() {
   const theme = useMantineTheme();
   const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
-  return <p>ks</p>;
+  return (
+    <HeroHeader title={"Minecraft"} color={"red"} rightSection={"hello"}/>
+  );
 }
 
 export default Home;

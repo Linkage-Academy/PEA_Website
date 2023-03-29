@@ -5,7 +5,6 @@ import ColoredHeader from "../ColoredHeader";
 import Hero from "../Hero";
 import useHeroHeaderStyles from "./HeroHeader.styles";
 import { IHeroProps } from "../Hero/Hero";
-import routes from "../../routes";
 
 type IHeroHeaderProps = IHeroProps;
 
@@ -18,7 +17,7 @@ function HeroHeader({ color, title, rightSection }: IHeroHeaderProps) {
 
   return (
     <Stack spacing={0} sx={{ position: "relative" }}>
-      <ColoredHeader color={color} routes={routes} />
+      <ColoredHeader color={color} />
       <Box className={classes.rightSidebar} />
 
       <Box pl={xPadding} pr={xPadding} my="md">
