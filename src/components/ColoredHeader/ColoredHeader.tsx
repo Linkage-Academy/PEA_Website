@@ -16,6 +16,7 @@ import {
 } from "@mantine/core";
 import { Link, useLocation } from "react-router-dom";
 import React from "react";
+import logoUrl from "./assets/Logo.png";
 import useColoredHeaderStyles from "./ColoredHeader.styles";
 
 export interface IColoredHeaderProps {
@@ -59,8 +60,8 @@ function ColoredHeader({ color }: IColoredHeaderProps) {
   return (
     <MantineHeader className={classes.header} pr="xl" height="auto">
       <Image
-        maw={185}
-        src=""
+        maw={200}
+        src={logoUrl}
         alt="Academy Linkage Logo"
         className={classes.headerLogo}
       />
