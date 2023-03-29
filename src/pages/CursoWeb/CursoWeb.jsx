@@ -13,8 +13,8 @@ import controller from "./static/controller.webp";
 import Codigo from "./static/Codigo.webp";
 
 
-const groupBannerTitle = '¿Por qué aprender con Minecraft?';
-const groupBannerDescription = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin et enim  incidunt laoreet. Nunc auc tor eu ante in blandit. In interdum vel elit eu sollicitudin Ut pretium blandit tincidunt. Vestibulum congue est  felis, at tristique tellus rhoncus eu. Nunc placerat tellus ex.';
+const groupBannerTitle = '¿Por qué aprender programación web?';
+const groupBannerDescription = 'Aprender programación web puede abrir un mundo de posibilidades. En nuestro curso, aprenderás a crear sitios y aplicaciones web interactivos y personalizados, desde cero. Te enseñaremos los lenguajes de programación necesarios para convertir tus ideas en realidad, y te guiaremos a través de proyectos prácticos que te ayudarán a desarrollar habilidades de resolución de problemas y lógica. Además, la programación web es una habilidad en demanda en la industria tecnológica, por lo que esta puede ser una carrera rentable y satisfactoria. ¡Únete a nuestro curso y comienza tu viaje en la programación web hoy mismo!';
 const stackBannerTitle = 'Aprende Jugando';
 const themeMantineColor = ['cyan', '7', 'cyan.7'];
 
