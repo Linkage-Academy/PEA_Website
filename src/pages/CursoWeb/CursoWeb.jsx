@@ -95,7 +95,7 @@ function CursoWeb() {
                     </Center>
 
                     <Box className={gridClasses.gridPlaying}>
-                        <StackBanner mainImage={controller} title={stackBannerTitle}/>
+                        <StackBanner mainImage={controller} title={stackBannerTitle} description={"En nuestro curso, nos enfocamos en hacer que el aprendizaje de programación web sea divertido y efectivo a través de la gamificación. Cada lección está diseñada para desafiarte y motivarte a mejorar tus habilidades a través de desafíos y juegos interactivos. La gamificación también te permite medir tu progreso y competir con otros estudiantes en línea, lo que puede aumentar tu motivación y compromiso. ¡Aprender programación web nunca ha sido tan emocionante!"}/>
                     </Box>
                 </Box>
             </Box>
