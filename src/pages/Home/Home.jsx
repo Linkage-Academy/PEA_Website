@@ -15,8 +15,6 @@ import ModulesSectionHome from "./components/ModulesSectionHome";
 
 
 function Home() {
-    const btnLink = ['/cursoprogramacioninfantil', '/cursoweb'];
-    const {classes} = useHomeHeroStyles();
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
     const xPadding = isLargeScreen ? 128 : "xs"

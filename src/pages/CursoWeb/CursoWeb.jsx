@@ -14,7 +14,7 @@ import Codigo from "./static/Codigo.webp";
 
 
 const groupBannerTitle = '¿Por qué aprender programación web?';
-const groupBannerDescription = 'Aprender programación web puede abrir un mundo de posibilidades. En nuestro curso, aprenderás a crear sitios y aplicaciones web interactivos y personalizados, desde cero. Te enseñaremos los lenguajes de programación necesarios para convertir tus ideas en realidad, y te guiaremos a través de proyectos prácticos que te ayudarán a desarrollar habilidades de resolución de problemas y lógica. Además, la programación web es una habilidad en demanda en la industria tecnológica, por lo que esta puede ser una carrera rentable y satisfactoria. ¡Únete a nuestro curso y comienza tu viaje en la programación web hoy mismo!';
+const groupBannerDescription = "Aprende a crear sitios y aplicaciones web interactivos desde cero con nuestro curso de programación web. Desarrolla habilidades en lógica y resolución de problemas, y prepárate para una carrera rentable en la industria tecnológica. Únete a nuestro curso y comienza tu viaje en la programación hoy mismo";
 const stackBannerTitle = 'Aprende Jugando';
 const themeMantineColor = ['cyan', '7', 'cyan.7'];
 
