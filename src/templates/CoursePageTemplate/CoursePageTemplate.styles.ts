@@ -22,6 +22,14 @@ const useCoursePageTemplateStyles = createStyles((theme) => ({
   gridPlaying: {
     gridArea: "playing",
   },
+  titleSection: {
+    fontSize: 20,
+    fontWeight: 500,
+
+    [theme.fn.largerThan("sm")]: {
+      fontSize: 28,
+    },
+  },
 }));
 
 export default useCoursePageTemplateStyles;

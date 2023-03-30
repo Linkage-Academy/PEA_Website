@@ -1,4 +1,4 @@
-import { Box, Image } from "@mantine/core";
+import { Box, Button, Image } from "@mantine/core";
 import {
   IconChartArrowsVertical,
   IconClockHour5,
@@ -14,6 +14,10 @@ import ComputerHeroImageWeb from "./assets/ComputerHeroImageWeb.webp";
 import Css from "./assets/css.webp";
 import Codigo from "./assets/Codigo.webp";
 import Controller from "./assets/Controller.webp";
+import Infantil from "../MinecraftCourse/assets/Infantil.webp";
+import Trans from "../MinecraftCourse/assets/Trans.webp";
+import Python from "../MinecraftCourse/assets/Python.webp";
+import Npc from "./assets/Npc.webp";
 
 const data: ICoursePageTemplateProps = {
   accentColor: "cyan",
@@ -72,6 +76,37 @@ const data: ICoursePageTemplateProps = {
     bottomSection: <Image radius="md" src={Controller} />,
     description:
       "En nuestro curso, nos enfocamos en hacer que el aprendizaje de programación web sea divertido y efectivo a través de la gamificación. Cada lección está diseñada para desafiarte y motivarte a mejorar tus habilidades a través de desafíos y juegos interactivos. La gamificación también te permite medir tu progreso y competir con otros estudiantes en línea, lo que puede aumentar tu motivación y compromiso. ¡Aprender programación web nunca ha sido tan emocionante!",
+  },
+  modules: [
+    {
+      title: "HTML/CSS",
+      img: Infantil,
+      description: "Módulo 1, 28 Horas de enseñanza",
+      hasButton: true,
+    },
+    {
+      title: "Python",
+      img: Trans,
+      description: "Módulo 2, 16 Horas de enseñanza",
+      hasButton: true,
+    },
+    {
+      title: "Django",
+      img: Python,
+      description: "Módulo 3, 32 Horas de enseñanza",
+      hasButton: true,
+    },
+  ],
+  infoThird: {
+    title: "Conviértete en un experto",
+    bottomSection: (
+      <Button color="cyan" mt="1rem" size="sm" fullWidth>
+        ¡Compra el curso ahora!
+      </Button>
+    ),
+    description:
+      "La metodología de nuestro curso para niños es que los chicos aprendan mientras se divierten en su videojuego favorito, en este caso Minecraft. La gamificación presente alrededor de la curva de aprendizaje será la clave para desarrollar el pensamiento lógico del estudiante. ¡Anímate!",
+    rightSection: <Image src={Npc} width={200} />,
   },
 };
 

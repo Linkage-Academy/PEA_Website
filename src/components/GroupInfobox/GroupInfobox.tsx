@@ -25,7 +25,9 @@ function GroupBanner({
         {description}
       </Text>
       <Box className={classes.gridBottomSection}>{bottomSection}</Box>
-      <Box className={classes.gridImage}>{rightSection}</Box>
+      <Box className={classes.gridImage} ml="sm">
+        {rightSection}
+      </Box>
     </Box>
   );
 }

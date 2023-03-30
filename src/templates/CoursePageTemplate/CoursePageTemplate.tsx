@@ -2,7 +2,10 @@ import {
   Box,
   Center,
   DefaultMantineColor,
+  Group,
+  SimpleGrid,
   Stack,
+  Title,
   useMantineTheme,
 } from "@mantine/core";
 import React from "react";
@@ -17,6 +20,7 @@ import { ICourseDescriptionCardProps } from "../../components/CourseDescriptionC
 import StackInfobox, {
   IStackInfoboxProps,
 } from "../../components/StackInfobox/StackInfobox";
+import ImageCourseCard from "../../components/ImageCourseCard/ImageCourseCard";
 
 export interface ICoursePageTemplateProps {
   accentColor: DefaultMantineColor;
@@ -28,6 +32,15 @@ export interface ICoursePageTemplateProps {
   courseCard: ICourseDescriptionCardProps;
 
   infoSecond: IStackInfoboxProps;
+
+  modules: {
+    img: string;
+    title: string;
+    description: string;
+    hasButton: boolean;
+  }[];
+
+  infoThird: IGroupInfobox;
 }
 
 function CoursePageTemplate({
@@ -36,6 +49,8 @@ function CoursePageTemplate({
   infoFirst,
   courseCard,
   infoSecond,
+  modules,
+  infoThird,
 }: ICoursePageTemplateProps) {
   const { classes } = useCoursePageTemplateStyles();
   const theme = useMantineTheme();
@@ -49,7 +64,8 @@ function CoursePageTemplate({
         color={accentColor}
         rightSection={hero.rightSection}
       />
-      <Box px={xPadding} className={classes.grid}>
+
+      <Box px={xPadding} className={classes.grid} bg="#FFFFFF" pb="2rem">
         <Box className={classes.gridWhy}>
           <GroupInfobox {...infoFirst} />
         </Box>
@@ -62,6 +78,32 @@ function CoursePageTemplate({
           <StackInfobox {...infoSecond} />
         </Box>
       </Box>
+
+      <Box bg="gray.1" px={xPadding} py="2rem">
+        <Title className={classes.titleSection}>Módulos</Title>
+        <SimpleGrid
+          cols={1}
+          pt="1rem"
+          spacing="1rem"
+          breakpoints={[{ minWidth: "sm", cols: 2 }]}
+        >
+          {modules.map((el) => (
+            <ImageCourseCard
+              key={el.title}
+              img={el.img}
+              title={el.title}
+              description={el.description}
+              hasButton={el.hasButton}
+              color={accentColor}
+            />
+          ))}
+        </SimpleGrid>
+      </Box>
+
+      <Group grow px={xPadding}>
+        <GroupInfobox {...infoThird} />
+        <Box />
+      </Group>
     </Stack>
   );
 }

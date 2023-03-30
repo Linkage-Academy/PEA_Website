@@ -1,4 +1,4 @@
-import { Box, Image } from "@mantine/core";
+import { Box, Button, Image } from "@mantine/core";
 import {
   IconChartArrowsVertical,
   IconClockHour5,
@@ -14,6 +14,11 @@ import { ICoursePageTemplateProps } from "../../templates/CoursePageTemplate/Cou
 import PlantHeroImageMinecraft from "./assets/PlantHeroImageMinecraft.webp";
 import Mansion from "./assets/Mansion.webp";
 import Players from "./assets/Players.webp";
+import Infantil from "./assets/Infantil.webp";
+import Trans from "./assets/Trans.webp";
+import Python from "./assets/Python.webp";
+import Arduino from "./assets/Arduino.webp";
+import Npc from "./assets/Npc.webp";
 
 const data: ICoursePageTemplateProps = {
   accentColor: "teal",
@@ -70,6 +75,43 @@ const data: ICoursePageTemplateProps = {
         icon: <IconSchool color="#0CA678" />,
       },
     ],
+  },
+  modules: [
+    {
+      title: "Programación Mediante Bloques",
+      img: Infantil,
+      description: "Módulo 1, 28 Horas de enseñanza",
+      hasButton: false,
+    },
+    {
+      title: "Transición a Código",
+      img: Trans,
+      description: "Módulo 2, 16 Horas de enseñanza",
+      hasButton: false,
+    },
+    {
+      title: "Python",
+      img: Python,
+      description: "Módulo 3, 32 Horas de enseñanza",
+      hasButton: false,
+    },
+    {
+      title: "Introducción a Arduino",
+      img: Arduino,
+      description: "Módulo 4, 16 Horas de enseñanza",
+      hasButton: false,
+    },
+  ],
+  infoThird: {
+    title: "Conviértete en un experto",
+    bottomSection: (
+      <Button color="teal" mt="1rem" size="sm" fullWidth>
+        ¡Compra el curso ahora!
+      </Button>
+    ),
+    description:
+      "La metodología de nuestro curso para niños es que los chicos aprendan mientras se divierten en su videojuego favorito, en este caso Minecraft. La gamificación presente alrededor de la curva de aprendizaje será la clave para desarrollar el pensamiento lógico del estudiante. ¡Anímate!",
+    rightSection: <Image src={Npc} width={200} />,
   },
 };
 
