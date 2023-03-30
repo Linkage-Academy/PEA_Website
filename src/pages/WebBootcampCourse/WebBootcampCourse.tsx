@@ -12,6 +12,8 @@ import CoursePageTemplate from "../../templates/CoursePageTemplate";
 import { ICoursePageTemplateProps } from "../../templates/CoursePageTemplate/CoursePageTemplate";
 import ComputerHeroImageWeb from "./assets/ComputerHeroImageWeb.webp";
 import Css from "./assets/css.webp";
+import Codigo from "./assets/Codigo.webp";
+import Controller from "./assets/Controller.webp";
 
 const data: ICoursePageTemplateProps = {
   accentColor: "cyan",
@@ -29,41 +31,47 @@ const data: ICoursePageTemplateProps = {
     bottomSection: <Box />,
   },
   courseCard: {
-    mainImage: "",
-    title: "Helo",
+    mainImage: Codigo,
+    title: "Bootcamp de desarrollo Web",
     color: "cyan",
     elements: [
       {
         label: "Nivel",
         description: "Principiante",
-        icon: <IconChartArrowsVertical color="#0CA678" />,
+        icon: <IconChartArrowsVertical color="#0D8598" />,
       },
       {
         label: "Horas Semanales",
         description: "4 Horas",
-        icon: <IconClockHour5 color="#0CA678" />,
+        icon: <IconClockHour5 color="#0D8598" />,
       },
       {
         label: "Edad",
-        description: "8 - 12 años",
-        icon: <IconUsers color="#0CA678" />,
+        description: "14+ años",
+        icon: <IconUsers color="#0D8598" />,
       },
       {
         label: "Certificado",
         description: "Si",
-        icon: <IconFileCertificate color="#0CA678" />,
+        icon: <IconFileCertificate color="#0D8598" />,
       },
       {
         label: "Insignia Digital",
         description: "Si",
-        icon: <IconRosette color="#0CA678" />,
+        icon: <IconRosette color="#0D8598" />,
       },
       {
         label: "Lecciones",
         description: "96 lecciones",
-        icon: <IconSchool color="#0CA678" />,
+        icon: <IconSchool color="#0D8598" />,
       },
     ],
+  },
+  infoSecond: {
+    title: "Aprende Jugando",
+    bottomSection: <Image radius="md" src={Controller} />,
+    description:
+      "En nuestro curso, nos enfocamos en hacer que el aprendizaje de programación web sea divertido y efectivo a través de la gamificación. Cada lección está diseñada para desafiarte y motivarte a mejorar tus habilidades a través de desafíos y juegos interactivos. La gamificación también te permite medir tu progreso y competir con otros estudiantes en línea, lo que puede aumentar tu motivación y compromiso. ¡Aprender programación web nunca ha sido tan emocionante!",
   },
 };
 

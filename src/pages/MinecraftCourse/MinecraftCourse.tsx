@@ -13,6 +13,7 @@ import CoursePageTemplate from "../../templates/CoursePageTemplate";
 import { ICoursePageTemplateProps } from "../../templates/CoursePageTemplate/CoursePageTemplate";
 import PlantHeroImageMinecraft from "./assets/PlantHeroImageMinecraft.webp";
 import Mansion from "./assets/Mansion.webp";
+import Players from "./assets/Players.webp";
 
 const data: ICoursePageTemplateProps = {
   accentColor: "teal",
@@ -26,6 +27,12 @@ const data: ICoursePageTemplateProps = {
       "Nuestro curso de Introducción al Mundo de la Programación tiene como objetivo despertar el pensamiento crítico en los niños desde temprana edad. Se impartirán conceptos como variables, tipo de datos, bucles, sentencias condicionales, etc. Las lecciones serán complementadas con actividades prácticas de programación dentro de Minecraft.",
     rightSection: <Image src={SkinWithLantern} height={200} />,
     bottomSection: <Box />,
+  },
+  infoSecond: {
+    title: "Aprende Jugando",
+    bottomSection: <Image radius="md" src={Players} />,
+    description:
+      "Construye la ciudad de tus sueños mientras desarrollas tus habilidades como programador.",
   },
   courseCard: {
     mainImage: Mansion,

@@ -2,7 +2,6 @@ import {
   Box,
   Center,
   DefaultMantineColor,
-  Skeleton,
   Stack,
   useMantineTheme,
 } from "@mantine/core";
@@ -15,6 +14,9 @@ import GroupInfobox, {
 } from "../../components/GroupInfobox/GroupInfobox";
 import CourseDescriptionCard from "../../components/CourseDescriptionCard";
 import { ICourseDescriptionCardProps } from "../../components/CourseDescriptionCard/CourseDescriptionCard";
+import StackInfobox, {
+  IStackInfoboxProps,
+} from "../../components/StackInfobox/StackInfobox";
 
 export interface ICoursePageTemplateProps {
   accentColor: DefaultMantineColor;
@@ -24,6 +26,8 @@ export interface ICoursePageTemplateProps {
   };
   infoFirst: IGroupInfobox;
   courseCard: ICourseDescriptionCardProps;
+
+  infoSecond: IStackInfoboxProps;
 }
 
 function CoursePageTemplate({
@@ -31,6 +35,7 @@ function CoursePageTemplate({
   hero,
   infoFirst,
   courseCard,
+  infoSecond,
 }: ICoursePageTemplateProps) {
   const { classes } = useCoursePageTemplateStyles();
   const theme = useMantineTheme();
@@ -54,7 +59,7 @@ function CoursePageTemplate({
         </Center>
 
         <Box className={classes.gridPlaying}>
-          <Skeleton height={50} width="100%" />
+          <StackInfobox {...infoSecond} />
         </Box>
       </Box>
     </Stack>
