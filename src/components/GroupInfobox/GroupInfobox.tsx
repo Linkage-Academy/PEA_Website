@@ -2,7 +2,7 @@ import { Box, Text, Title } from "@mantine/core";
 import React from "react";
 import useGroupInfoboxStyles from "./GroupInfobox.styles";
 
-export interface IGroupInfobox {
+export interface IGroupInfoboxProps {
   title: string;
   description: string;
   rightSection: React.ReactNode;
@@ -14,7 +14,7 @@ function GroupBanner({
   description,
   bottomSection,
   rightSection,
-}: IGroupInfobox) {
+}: IGroupInfoboxProps) {
   const { classes } = useGroupInfoboxStyles();
   return (
     <Box className={classes.grid}>

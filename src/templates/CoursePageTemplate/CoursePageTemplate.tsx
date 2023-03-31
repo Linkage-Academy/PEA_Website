@@ -13,7 +13,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import HeroHeader from "../../components/HeroHeader";
 import useCoursePageTemplateStyles from "./CoursePageTemplate.styles";
 import GroupInfobox, {
-  IGroupInfobox,
+  IGroupInfoboxProps,
 } from "../../components/GroupInfobox/GroupInfobox";
 import CourseDescriptionCard from "../../components/CourseDescriptionCard";
 import { ICourseDescriptionCardProps } from "../../components/CourseDescriptionCard/CourseDescriptionCard";
@@ -28,7 +28,7 @@ export interface ICoursePageTemplateProps {
     title: string;
     rightSection: React.ReactNode;
   };
-  infoFirst: IGroupInfobox;
+  infoFirst: IGroupInfoboxProps;
   courseCard: ICourseDescriptionCardProps;
 
   infoSecond: IStackInfoboxProps;
@@ -40,7 +40,7 @@ export interface ICoursePageTemplateProps {
     hasButton: boolean;
   }[];
 
-  infoThird: IGroupInfobox;
+  infoThird: IGroupInfoboxProps;
 }
 
 function CoursePageTemplate({
