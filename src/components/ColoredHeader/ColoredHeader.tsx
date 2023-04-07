@@ -18,6 +18,7 @@ import { Link, useLocation } from "react-router-dom";
 import React from "react";
 import logoUrl from "./assets/Logo.png";
 import useColoredHeaderStyles from "./ColoredHeader.styles";
+import SendEmailModal from "../SendEmailModal";
 
 export interface IColoredHeaderProps {
   color: DefaultMantineColor;
@@ -43,6 +44,8 @@ const routes = [
 function ColoredHeader({ color }: IColoredHeaderProps) {
   const { classes } = useColoredHeaderStyles({ color });
   const [opened, { toggle, close }] = useDisclosure(false);
+  const [openedEmail, { open: openEmail, close: closeEmail }] =
+    useDisclosure(false);
 
   const theme: MantineTheme = useMantineTheme();
   const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm})`);
@@ -67,6 +70,7 @@ function ColoredHeader({ color }: IColoredHeaderProps) {
 
   return (
     <MantineHeader className={classes.header} pr="xl" height="auto">
+      <SendEmailModal opened={openedEmail} close={closeEmail} />
       <Image
         maw={200}
         src={logoUrl}
@@ -107,6 +111,7 @@ function ColoredHeader({ color }: IColoredHeaderProps) {
             size="sm"
             color={`${color}.6`}
             variant="white"
+            onClick={openEmail}
           >
             Inscribete Ahora
           </Button>
