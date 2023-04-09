@@ -4,19 +4,19 @@ import { Box, Text, } from "@mantine/core";
 import useAboutUsStyles from "./AboutUs.styles";
 
 export interface IAboutUsprops{
-    Vision:IStackInfoboxProps;
-    Mission:IStackInfoboxProps;  
+    vision:IStackInfoboxProps;
+    mission:IStackInfoboxProps;  
 }
 
 function AboutUs({
-    Vision,
-    Mission
+    vision,
+    mission
 }: IAboutUsprops){
     const {classes} = useAboutUsStyles();
     return(
         <Box className={classes.grid}>
-            <StackInfobox {...Vision}/>
-            <StackInfobox {...Mission}/>
+            <StackInfobox {...vision}/>
+            <StackInfobox {...mission}/>
         </Box>
     )
 
