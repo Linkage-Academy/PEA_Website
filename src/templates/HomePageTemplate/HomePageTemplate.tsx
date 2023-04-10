@@ -100,10 +100,10 @@ function HomePageTemplate({
                 </ActionIcon>
                 <Box>
                   <Text fz="lg" fw={700} color="white">
-                    Compromiso
+                  Sastifacción
                   </Text>
                   <Text fz="md" color="white">
-                    en la sastifacción del cliente
+                     del cliente
                   </Text>
                 </Box>
               </Stack>
@@ -123,10 +123,10 @@ function HomePageTemplate({
                 </ActionIcon>
                 <Box>
                   <Text fz="lg" fw={700} color="white">
-                    Respeto
+                  Comunicación 
                   </Text>
                   <Text fz="md" color="white">
-                    en nuestras comunicaciones
+                  con Respeto 
                   </Text>
                 </Box>
               </Stack>
@@ -146,10 +146,10 @@ function HomePageTemplate({
                 </ActionIcon>
                 <Box>
                   <Text fz="lg" fw={700} color="white">
-                    Voluntad
+                    Integridad    
                   </Text>
                   <Text fz="md" color="white">
-                    en impartir el mejor contenido
+                    en procesos 
                   </Text>
                 </Box>
               </Stack>
@@ -169,10 +169,10 @@ function HomePageTemplate({
                 </ActionIcon>
                 <Box>
                   <Text fz="lg" fw={700} color="white">
-                    Responsabilidad
+                   Compromiso    
                   </Text>
                   <Text fz="md" color="white">
-                    con nuestros colaboradores
+                    con colaboradores
                   </Text>
                 </Box>
               </Stack>
