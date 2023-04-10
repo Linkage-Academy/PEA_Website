@@ -21,7 +21,7 @@ const routes: CustomRoute[] = [
   },
   {
     navName: "",
-    path: "/empresial",
+    path: "/empresarial",
     element: <WebBootcampCourse />,
   },
 ];
