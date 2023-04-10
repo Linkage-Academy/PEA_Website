@@ -16,12 +16,12 @@ const routes: CustomRoute[] = [
   },
   {
     navName: "",
-    path: "/minecraft",
+    path: "/profesional",
     element: <MinecraftCourse />,
   },
   {
     navName: "",
-    path: "/web",
+    path: "/empresial",
     element: <WebBootcampCourse />,
   },
 ];

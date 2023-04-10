@@ -32,12 +32,12 @@ const routes = [
     path: "/",
   },
   {
-    navName: "Minecraft",
-    path: "/minecraft",
+    navName: "Profesional",
+    path: "/profesional",
   },
   {
-    navName: "Bootcamp Web",
-    path: "/web",
+    navName: "Empresarial",
+    path: "/empresarial",
   },
 ];
 
