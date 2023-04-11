@@ -11,6 +11,7 @@ const useColoredHeaderStyles = createStyles(
       border: "none",
       justifyContent: "space-between",
       backgroundColor: "transparent",
+      
 
       [theme.fn.largerThan("sm")]: {
         backgroundColor: theme.colors[color][7],

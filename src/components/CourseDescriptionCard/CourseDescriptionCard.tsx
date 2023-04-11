@@ -13,7 +13,7 @@ import { useDisclosure } from "@mantine/hooks";
 import useCourseDescriptionCardStyles from "./CourseDescriptionCard.styles";
 import SendEmailModal from "../SendEmailModal";
 
-interface ICourseDescriptionCardElement {
+export interface ICourseDescriptionCardElement {
   label: string;
   icon: JSX.Element;
   description: string;

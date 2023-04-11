@@ -39,6 +39,10 @@ const routes = [
     navName: "Empresarial",
     path: "/empresarial",
   },
+  {
+    navName: "Universitario",
+    path: "/universitario",
+  },
 ];
 
 function ColoredHeader({ color }: IColoredHeaderProps) {
