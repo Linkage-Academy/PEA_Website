@@ -10,7 +10,7 @@ import {
   } from "@tabler/icons-react";
 
 import Mansion from "./assets/Mansion.webp";
-import profesionalImg from "./assets/profesionalImg.jpg";
+import empresariallImg from "./assets/empresarialImg.jpg";
 
 const data: IPEACourseTemplateProps = {
     accentColor:"grape",
@@ -57,16 +57,16 @@ const data: IPEACourseTemplateProps = {
         },        
     },
     PEAHeroInfo:{
-      heroImg:profesionalImg,
+      heroImg:empresariallImg,
       title:"Programas para Profesionales"  
     }
 
 }
 
-function ProfessionalCourse(){
+function EmpresarialCourse(){
     return(
         <PEACourseTemplate {...data}/>
     )
 }
 
-export default ProfessionalCourse;
+export default EmpresarialCourse;

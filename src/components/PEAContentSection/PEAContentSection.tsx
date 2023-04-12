@@ -13,7 +13,7 @@ import { ICourseDescriptionCardElement } from "../CourseDescriptionCard/CourseDe
 
 export interface IPEAContentSectiosProps{
     textContent:string;
-    listContent:string[]
+    listContent?:string[]
     courseInfo:{
         cardImage:string,
         color:DefaultMantineColor,
@@ -32,7 +32,7 @@ function PEAContentSection({
     courseInfo
 }:IPEAContentSectiosProps){
     const {classes} = usePEAContentSectionStyles();
-    const listContentElements = listContent.map((element) => (
+    const listContentElements = listContent?.map((element) => (
         <List.Item>{element}</List.Item> 
         )
     )

@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import MinecraftCourse from "./pages/MinecraftCourse";
 import WebBootcampCourse from "./pages/WebBootcampCourse";
 import ProfessionalCourse from "./pages/ProfesionalCourse/ProfessionalCourse";
+import EmpresarialCourse from "./pages/EmpresarialCourse/EmpresarialCourse";
 
 
 export type CustomRoute = RouteObject & {
@@ -24,7 +25,7 @@ const routes: CustomRoute[] = [
   {
     navName: "",
     path: "/empresarial",
-    element: <WebBootcampCourse />,
+    element: <EmpresarialCourse />,
   },
   {
     navName: "",
