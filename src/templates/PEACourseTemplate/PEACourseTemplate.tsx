@@ -1,15 +1,7 @@
 // React
 import {
-    ActionIcon,
-    Box,
-    Card,
     DefaultMantineColor,
-    Group,
-    Image,
-    SimpleGrid,
     Stack,
-    Text,
-    Title,
     useMantineTheme,
   } from "@mantine/core";
 
@@ -48,10 +40,6 @@ return(
         <Stack px={xPadding} spacing="sm" pb={30}>
             <PEAContentSection {... PEAContentInfo}/>
         </Stack>
-      
-
-        
-
     </Stack>
 )
 }
